@@ -20,10 +20,6 @@ This repository contains neural network implementations of 2D conformal field th
 | **Free Boson** ★ | c = 1 | Vertex operators `<V_α V_-α>` | **0.03-3.4%** |
 | **Free Boson** | c = 1 | Current correlator `<J*J>` | ~30% |
 
-### Free Boson: Direct c=1 Verification (★ Best Precision)
-- **Method**: Vertex operator correlators `<V_α(0) V_-α(r)> ~ r^(-α²)`
-- **Accuracy**: 0.03-3.4% error across α = 0.5, 1.0, 1.5, 2.0
-
 
 ## Repository Structure
 
