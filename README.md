@@ -29,7 +29,7 @@ This repository contains neural network implementations of 2D conformal field th
 ├── INSTALLATION.md              # Setup instructions
 ├── free_boson_model/            # ★ Free boson c=1 (best precision)
 │   ├── vertex_operator.py               # Vertex operators (0.03-3.4% error)
-│   ├── chiral_boson_redux.py            # Current correlators (~30% error)
+│   ├── free_boson.py            # Current correlators (~30% error)
 │   ├── vertex_precision.png             # Main result figure
 ```
 
