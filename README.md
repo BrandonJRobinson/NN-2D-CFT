@@ -39,7 +39,7 @@ This repository contains neural network implementations of 2D conformal field th
 ```bash
 # Clone repository
 git clone [repository-url]
-cd virasoro-neural-networks
+cd NN-2D-CFT
 
 # Install dependencies
 pip install numpy matplotlib scipy tqdm
