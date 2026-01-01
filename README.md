@@ -11,16 +11,6 @@
 This repository contains neural network implementations of 2D conformal field theories (CFTs), specifically:
 - **Free Boson** (c=1): Direct CFT verification via vertex operators (0.03-3.4% error) ★
 
-## Key Results
-
-### Summary of Models
-
-| Model | Central Charge | Observable | Best Error|
-|-------|---------------|------------|------------|
-| **Free Boson** ★ | c = 1 | Vertex operators `<V_α V_-α>` | **0.03-3.4%** |
-| **Free Boson** | c = 1 | Current correlator `<J*J>` | ~30% |
-
-
 ## Repository Structure
 
 ```
