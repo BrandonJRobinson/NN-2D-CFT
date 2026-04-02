@@ -17,14 +17,14 @@ This repository contains neural network implementations of 2D conformal field th
 | Observable | Theory Target | Error / Accuracy | Method |
 |------------|--------------|------------------|--------|
 | Vertex operators `⟨V_α V_-α⟩` | `r^(-α²)` | **0.03–3.4%** | Structure function (original) |
-| Stress tensor `⟨TT⟩ = B²/128` | `c/(2r⁴)`, c=1 | **Exact** (Gaussian reg.) | Deterministic Bessel J₂ |
-| Super-Virasoro fermion `⟨ψψ⟩` | `1/r` | **~98%** accuracy | Deterministic Bessel J₁ |
-| Super-Virasoro boson `⟨∂φ∂φ⟩` | `1/r²` | **~98%** accuracy | Deterministic Bessel J₂ |
-| Supercurrent `⟨GG⟩` (Wick) | `1/r³` | **~96%** accuracy | Wick factorization |
-| Boundary boson (Neumann) | `-ln(2y)` slope | **>90%** accuracy | Method of images |
-| Boundary fermion (Reflection) | `1/r` | **>90%** accuracy | Deterministic Bessel J₁ |
-| N=1 scalar multiplet (boundary) | `1/r`, `1/r²`, `1/r³` | **>90%** accuracy | Method of images + Wick |
-| Current correlator `⟨J*J⟩` | `1/r²` | ~30% | J₀ Bessel (original, cutoff-sensitive) |
+| Stress tensor `⟨TT⟩ = B²/128` | `c/(2r⁴)`, c=1 |**99.6%** | Deterministic Bessel J₂ |
+| Super-Virasoro fermion `⟨ψψ⟩` | `1/r` | **99.5%**  | Deterministic Bessel J₁ |
+| Super-Virasoro boson `⟨∂φ∂φ⟩` | `1/r²` | **~95.1%**  | Deterministic Bessel J₂ |
+| Supercurrent `⟨GG⟩` (Wick) | `1/r³` | **~96.5%**  | Wick factorization |
+| Boundary boson (Neumann) | `-ln(2y)` slope | **99.8%**  | Method of images |
+| Boundary fermion (Reflection) | `1/r` | **99.5**  | Deterministic Bessel J₁ |
+| N=1 scalar multiplet (boundary) | `1/r`, `1/r²`, `1/r³` | **>96%*  | Method of images + Wick |
+
 
 ### Variance Reduction Technique
 
