@@ -14,21 +14,20 @@ This directory contains implementations of the **free (chiral) boson** c=1 CFT, 
 | Observable | Error | Status | Notes |
 |------------|-------|--------|-------|
 | Vertex operators `⟨V_α(0)V_α(r)⟩` | **0.03–3.4%** | ✅ Excellent | Power law scaling with Gaussian damping |
-| Current correlator `⟨J*(0)J(r)⟩` | **~30%** | ⚠️ Acceptable | J₀ Bessel oscillations, cutoff sensitive |
 
 ### Variance-Reduced Simulations (★ New)
 
 | Observable | Theory Target | Accuracy | Figure |
 |------------|--------------|----------|--------|
-| Super-Virasoro fermion `⟨ψψ⟩` | `~ 1/r` | **~98%** | `super_virasoro_variance_reduced.pdf` |
-| Super-Virasoro boson `⟨∂φ∂φ⟩` | `~ 1/r²` | **~98%** | `super_virasoro_variance_reduced.pdf` |
-| Supercurrent `⟨GG⟩` (Wick) | `~ 1/r³` | **~96%** | `super_virasoro_variance_reduced.pdf` |
-| Stress tensor `⟨TT⟩ = B²/128` | `c/(2r⁴)` | **Exact** (Gaussian reg.) | `stress_tensor_TT_variance_reduced.pdf` |
-| Boundary boson (Neumann) | `-ln(2y)` slope | **>90%** | `separate_boundary_tests_variance_reduced_1.pdf` |
-| Boundary fermion (Reflection) | `~ 1/r` | **>90%** | `separate_boundary_tests_variance_reduced_1.pdf` |
-| N=1 boundary fermion `⟨ψψ⟩` | `~ 1/r` | **>90%** | `super_boundary_multiplet_variance_reduced.pdf` |
-| N=1 boundary boson `⟨∂φ∂φ⟩` | `~ 1/r²` | **>90%** | `super_boundary_multiplet_variance_reduced.pdf` |
-| N=1 boundary supercurrent `⟨GG⟩` | `~ 1/r³` | **>90%** | `super_boundary_multiplet_variance_reduced.pdf` |
+| Super-Virasoro fermion `⟨ψψ⟩` | `~ 1/r` | **99.4%** | `super_virasoro_variance_reduced.pdf` |
+| Super-Virasoro boson `⟨∂φ∂φ⟩` | `~ 1/r²` | **95.1%** | `super_virasoro_variance_reduced.pdf` |
+| Supercurrent `⟨GG⟩` (Wick) | `~ 1/r³` | **~96.5%** | `super_virasoro_variance_reduced.pdf` |
+| Stress tensor `⟨TT⟩ = B²/128` | `c/(2r⁴)` | **99.6%**  | `stress_tensor_TT_variance_reduced.pdf` |
+| Boundary boson (Neumann) | `-ln(2y)` slope | **99.8%** | `separate_boundary_tests_variance_reduced_1.pdf` |
+| Boundary fermion (Reflection) | `~ 1/r` | **99.5%** | `separate_boundary_tests_variance_reduced_1.pdf` |
+| N=1 boundary fermion `⟨ψψ⟩` | `~ 1/r` | **99.4%** | `super_boundary_multiplet_variance_reduced.pdf` |
+| N=1 boundary boson `⟨∂φ∂φ⟩` | `~ 1/r²` | **95.1%** | `super_boundary_multiplet_variance_reduced.pdf` |
+| N=1 boundary supercurrent `⟨GG⟩` | `~ 1/r³` | **96.4%** | `super_boundary_multiplet_variance_reduced.pdf` |
 
 ---
 
