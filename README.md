@@ -23,7 +23,7 @@ This repository contains neural network implementations of 2D conformal field th
 | Supercurrent `⟨GG⟩` (Wick) | `1/r³` | **~96.5%**  | Wick factorization |
 | Boundary boson (Neumann) | `-ln(2y)` slope | **99.8%**  | Method of images |
 | Boundary fermion (Reflection) | `1/r` | **99.5**  | Deterministic Bessel J₁ |
-| N=1 scalar multiplet (boundary) | `1/r`, `1/r²`, `1/r³` | **>96%*  | Method of images + Wick |
+| N=1 scalar multiplet (boundary) | `1/r`, `1/r²`, `1/r³` | **>96%**  | Method of images + Wick |
 
 
 ### Variance Reduction Technique
