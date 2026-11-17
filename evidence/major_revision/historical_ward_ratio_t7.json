@@ -1,0 +1,11 @@
+{
+  "ratio": 31.74280532942579,
+  "mean_log_ratio": 3.457666095862568,
+  "log_ratio_standard_error": 0.06232834125080251,
+  "independent_seeds": 8,
+  "interval_method": "Student t on eight seed-averaged log ratios, 7 degrees of freedom",
+  "ci95": [
+    27.392876246294957,
+    36.78349367632056
+  ]
+}

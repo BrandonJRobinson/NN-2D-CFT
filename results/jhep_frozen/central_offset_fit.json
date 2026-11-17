@@ -1,0 +1,337 @@
+{
+  "description": "WP-E extended central-offset test. 'canonical_truncated' is the exact_symbolic null: the modewise anomaly of the CANONICAL truncated Sugawara algebra. 'raw_empirical' uses the measured finite-feature pairing. Fitted models: (1) signed alternating constant offset c_m = 1 + (-1)^m A/(m(m^2-1)/12); (2) |c_m - 1| ~ m^p with the model target p = -3; (3) nulls: zero offset and a mode-independent signed (non-alternating) offset.",
+  "legacy_offset_reference": 0.1821971014211161,
+  "config_hash": "278e438b94465564",
+  "fits": {
+    "canonical_truncated|all": {
+      "source": "canonical_truncated",
+      "group": "all",
+      "n_modes": 11,
+      "modes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "alternating_offset_A": 0.0,
+      "alternating_offset_sd": 0.0,
+      "alternating_offset_ci": [
+        0.0,
+        0.0
+      ],
+      "legacy_offset_reference": 0.1821971014211161,
+      "consistent_with_legacy": false,
+      "model_r_squared": NaN,
+      "model_residual_rms": 0.0,
+      "decay_exponent_target": -3.0,
+      "decay_exponent": NaN,
+      "decay_exponent_stderr": NaN,
+      "decay_exponent_ci": [
+        NaN,
+        NaN
+      ],
+      "decay_r_squared": NaN,
+      "decay_n_rows": 0,
+      "decay_excluded_rows": 11,
+      "decay_status": "not fitted: |c_m - 1| is identically zero, so the m^-3 decay model has no support. This is itself the result -- truncation alone produces no modewise offset.",
+      "null_zero_offset_rms": 0.0,
+      "null_mode_independent_signed_offset_sd": 0.0,
+      "observed_c": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "predicted_c": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "canonical_truncated|all|m2to4": {
+      "source": "canonical_truncated",
+      "group": "all|m2to4",
+      "n_modes": 3,
+      "modes": [
+        2,
+        3,
+        4
+      ],
+      "alternating_offset_A": 0.0,
+      "alternating_offset_sd": 0.0,
+      "alternating_offset_ci": [
+        0.0,
+        0.0
+      ],
+      "legacy_offset_reference": 0.1821971014211161,
+      "consistent_with_legacy": false,
+      "model_r_squared": NaN,
+      "model_residual_rms": 0.0,
+      "decay_exponent_target": -3.0,
+      "decay_exponent": NaN,
+      "decay_exponent_stderr": NaN,
+      "decay_exponent_ci": [
+        NaN,
+        NaN
+      ],
+      "decay_r_squared": NaN,
+      "decay_n_rows": 0,
+      "decay_excluded_rows": 3,
+      "decay_status": "not fitted: |c_m - 1| is identically zero, so the m^-3 decay model has no support. This is itself the result -- truncation alone produces no modewise offset.",
+      "null_zero_offset_rms": 0.0,
+      "null_mode_independent_signed_offset_sd": 0.0,
+      "observed_c": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "predicted_c": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "raw_empirical|sharp_annulus_manuscript": {
+      "source": "raw_empirical",
+      "group": "sharp_annulus_manuscript",
+      "n_modes": 11,
+      "modes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "alternating_offset_A": 156666.4823537579,
+      "alternating_offset_sd": 402797.1880997529,
+      "alternating_offset_ci": [
+        2526.180930357607,
+        413192.2597561783
+      ],
+      "legacy_offset_reference": 0.1821971014211161,
+      "consistent_with_legacy": true,
+      "model_r_squared": -1299.1826821862498,
+      "model_residual_rms": 97941.10201651308,
+      "decay_exponent_target": -3.0,
+      "decay_exponent": 1.6321979788821555,
+      "decay_exponent_stderr": 1.449758219080961,
+      "decay_exponent_ci": [
+        -1.6473829606544643,
+        4.911778918418776
+      ],
+      "decay_r_squared": 0.12344940269073756,
+      "decay_n_rows": 11,
+      "decay_excluded_rows": 0,
+      "decay_status": "fitted",
+      "null_zero_offset_rms": 414777.48701012525,
+      "null_mode_independent_signed_offset_sd": 401911.7561910265,
+      "observed_c": [
+        288.9365555625965,
+        -3.0775314755388377,
+        420.58376143487595,
+        -12.723524292391916,
+        766.320433588979,
+        -6.445358721550778,
+        1619.9089017487213,
+        16.257693097561766,
+        3799.001965887568,
+        98.58446340104611,
+        9355.285785799257
+      ],
+      "predicted_c": [
+        313333.9647075158,
+        -78332.24117687895,
+        31334.29647075158,
+        -15665.64823537579,
+        8953.370420214736,
+        -5594.23151263421,
+        3731.15434175614,
+        -2610.1080392292984,
+        1899.987664894035,
+        -1423.2407486705263,
+        1096.5698066696357
+      ]
+    },
+    "raw_empirical|tapered_log_window": {
+      "source": "raw_empirical",
+      "group": "tapered_log_window",
+      "n_modes": 11,
+      "modes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "alternating_offset_A": 22455.32331693335,
+      "alternating_offset_sd": 53667.02312646858,
+      "alternating_offset_ci": [
+        1852.3821152241835,
+        56962.081278526086
+      ],
+      "legacy_offset_reference": 0.1821971014211161,
+      "consistent_with_legacy": true,
+      "model_r_squared": -1401.6500984143752,
+      "model_residual_rms": 14037.581177733067,
+      "decay_exponent_target": -3.0,
+      "decay_exponent": 2.080418443639095,
+      "decay_exponent_stderr": 0.8597021381649277,
+      "decay_exponent_ci": [
+        0.13563709396555845,
+        4.025199793312632
+      ],
+      "decay_r_squared": 0.3941865372642328,
+      "decay_n_rows": 11,
+      "decay_excluded_rows": 0,
+      "decay_status": "fitted",
+      "null_zero_offset_rms": 55879.863595946335,
+      "null_mode_independent_signed_offset_sd": 54761.82282756205,
+      "observed_c": [
+        40.95812908117624,
+        -0.8733727343464959,
+        57.430590759289565,
+        -5.139571721822324,
+        102.94548297930605,
+        -12.752742086746979,
+        214.0107263863346,
+        -35.89475337502622,
+        510.9889181931603,
+        -102.15282411914849,
+        1258.9799102091358
+      ],
+      "predicted_c": [
+        44911.6466338667,
+        -11226.661658466675,
+        4492.06466338667,
+        -2244.532331693335,
+        1284.1613323961915,
+        -800.9758327476196,
+        535.6505551650798,
+        -373.25538861555583,
+        273.1857371749497,
+        -203.13930288121227,
+        158.0302329855479
+      ]
+    },
+    "raw_empirical|sharp_annulus_manuscript|m2to4": {
+      "source": "raw_empirical",
+      "group": "sharp_annulus_manuscript|m2to4",
+      "n_modes": 3,
+      "modes": [
+        2,
+        3,
+        4
+      ],
+      "alternating_offset_A": 750.0140493022518,
+      "alternating_offset_sd": 1169.2932628521255,
+      "alternating_offset_ci": [
+        8.155062951077676,
+        2097.9188071743797
+      ],
+      "legacy_offset_reference": 0.1821971014211161,
+      "consistent_with_legacy": true,
+      "model_r_squared": -16.860427047593156,
+      "model_residual_rms": 748.204180482169,
+      "decay_exponent_target": -3.0,
+      "decay_exponent": -0.18158872746125254,
+      "decay_exponent_stderr": 7.387874326181052,
+      "decay_exponent_ci": [
+        -94.05343248294801,
+        93.69025502802552
+      ],
+      "decay_r_squared": 0.0006037768759683537,
+      "decay_n_rows": 3,
+      "decay_excluded_rows": 0,
+      "decay_status": "fitted",
+      "null_zero_offset_rms": 1214.0917993236785,
+      "null_mode_independent_signed_offset_sd": 1174.4936021208107,
+      "observed_c": [
+        288.9365555625965,
+        -3.0775314755388377,
+        420.58376143487595
+      ],
+      "predicted_c": [
+        1501.0280986045036,
+        -374.0070246511259,
+        151.00280986045036
+      ]
+    },
+    "raw_empirical|tapered_log_window|m2to4": {
+      "source": "raw_empirical",
+      "group": "tapered_log_window|m2to4",
+      "n_modes": 3,
+      "modes": [
+        2,
+        3,
+        4
+      ],
+      "alternating_offset_A": 101.95958793524296,
+      "alternating_offset_sd": 156.26294785042762,
+      "alternating_offset_ci": [
+        3.7467454686929913,
+        282.1529537964478
+      ],
+      "legacy_offset_reference": 0.1821971014211161,
+      "consistent_with_legacy": true,
+      "model_r_squared": -15.931868118470817,
+      "model_residual_rms": 100.98424206215154,
+      "decay_exponent_target": -3.0,
+      "decay_exponent": -0.03005015146671408,
+      "decay_exponent_stderr": 5.382313508824695,
+      "decay_exponent_ci": [
+        -68.4188275502575,
+        68.35872724732408
+      ],
+      "decay_r_squared": 3.1170359528043257e-05,
+      "decay_n_rows": 3,
+      "decay_excluded_rows": 0,
+      "decay_status": "fitted",
+      "null_zero_offset_rms": 163.32328927374334,
+      "null_mode_independent_signed_offset_sd": 158.6593312247125,
+      "observed_c": [
+        40.95812908117624,
+        -0.8733727343464959,
+        57.430590759289565
+      ],
+      "predicted_c": [
+        204.91917587048593,
+        -49.97979396762148,
+        21.391917587048592
+      ]
+    }
+  }
+}

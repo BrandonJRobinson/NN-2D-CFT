@@ -1,0 +1,84 @@
+[
+  {
+    "estimator": "direct_TT",
+    "n_blocks": 12,
+    "n_geometries": 4,
+    "geometry_means": [
+      0.9918029421518332,
+      0.9786011183454999,
+      1.0033784263806667,
+      1.9204819904098336
+    ],
+    "geometry_se": [
+      0.03495396822006809,
+      0.13803675519076042,
+      0.25418399830161653,
+      0.5621192259719525
+    ],
+    "gls_common_ratio": 1.0083030020791788,
+    "gls_plugin_se": 0.033773679809760926,
+    "legacy_scalar_t_p": 0.8103310409269175,
+    "residual_Q": 9.18536703709697,
+    "legacy_chi2_p": 0.02692520195967105,
+    "contrast_T2": 9.185367037096922,
+    "contrast_F": 2.5051001010264335,
+    "contrast_dof": [
+      3,
+      9
+    ],
+    "contrast_F_p": 0.12504295567418372,
+    "all_geometry_T2": 9.245805516589927,
+    "all_geometry_F": 1.6810555484708958,
+    "all_geometry_F_p": 0.2463268787987865,
+    "conservative_95pct_common_mean_interval_from_hotelling_projection": [
+      0.8531343760520973,
+      1.1634716281062603
+    ],
+    "leave_one_block_out_qhat_range": [
+      0.9710710422406927,
+      1.0371446608413004
+    ],
+    "assumptions": "Independent identically distributed approximately Gaussian block vectors; exact F calibration under multivariate normality. No geometry or block excluded."
+  },
+  {
+    "estimator": "wick_factorized",
+    "n_blocks": 12,
+    "n_geometries": 4,
+    "geometry_means": [
+      1.0014477772200001,
+      0.9974517061416669,
+      0.9923265503599169,
+      0.99412103963075
+    ],
+    "geometry_se": [
+      0.0016146628952844438,
+      0.002817017293910224,
+      0.003894454030500935,
+      0.005947943325188499
+    ],
+    "gls_common_ratio": 0.9994106707296787,
+    "gls_plugin_se": 0.0013291774921008873,
+    "legacy_scalar_t_p": 0.6660857177557586,
+    "residual_Q": 7.457720580695558,
+    "legacy_chi2_p": 0.058654800636935005,
+    "contrast_T2": 7.4577205806956925,
+    "contrast_F": 2.033923794735189,
+    "contrast_dof": [
+      3,
+      9
+    ],
+    "contrast_F_p": 0.17967254429122315,
+    "all_geometry_T2": 7.654305440314363,
+    "all_geometry_F": 1.391691898238975,
+    "all_geometry_F_p": 0.3193532548469325,
+    "conservative_95pct_common_mean_interval_from_hotelling_projection": [
+      0.9933039436464247,
+      1.0055173978129328
+    ],
+    "leave_one_block_out_qhat_range": [
+      0.9985241403624971,
+      1.000185167911804
+    ],
+    "assumptions": "Independent identically distributed approximately Gaussian block vectors; exact F calibration under multivariate normality. No geometry or block excluded."
+  }
+]

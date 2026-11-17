@@ -1,0 +1,19 @@
+{
+  "status": "CHECKS_PASSED_PUBLICATION_PENDING_APPROVAL",
+  "scientific_tests_passed": 215,
+  "skipped": 0,
+  "original_hardening_artifacts_verified": 377,
+  "exact_source_files": 78,
+  "independent_november_checks_rerun": true,
+  "validation_environment": {
+    "python": "3.13.2",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "pandas": "2.3.3",
+    "pytest": "9.1.1"
+  },
+  "test_checkout": "Temporary local Git repository used only for validation; no original private history exported.",
+  "extraction_portability": "Run verify_release.py --restore-archive-times before legacy timestamp-based freshness tests.",
+  "source_and_data": "Tested original source and data bytes are unchanged; this validation metadata is added after the tests.",
+  "publication_status": "Not uploaded or published; no DOI assigned; author/license approval pending."
+}

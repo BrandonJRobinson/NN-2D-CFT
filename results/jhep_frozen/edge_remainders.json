@@ -1,0 +1,7510 @@
+{
+  "description": "Full normal-ordered edge remainder Delta_{mn}(omega_can) = [L_m^(Lambda), L_n^(Lambda)] - (m-n)L_{m+n}^(Lambda) - (c/12)m(m^2-1)delta_{m+n,0} outside the filtered domain of Theorem 4.6. The remainder is a diagnostic of the cutoff boundary and is NOT used to define a bulk projection.",
+  "theorem_domain": "K + m_- + n_- <= Lambda  (eq. 4.15)",
+  "k_max_formula": "K_max(Lambda;m,n) = Lambda - m_- - n_-  (eq. D.1)",
+  "config_hash": "278e438b94465564",
+  "filtered_fock_exactness_checks": [
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 6.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 6.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 8.48528137423857,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 8.48528137423857,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 15.874507866387544,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 15.874507866387544,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 12.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 12.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 16.97056274847714,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 16.97056274847714,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 20.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 20.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 3.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 3.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 10.44030650891055,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 10.44030650891055,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 17.635192088548397,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 17.635192088548397,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 30.116440692751194,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 30.116440692751194,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 8.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 8.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 18.788294228055936,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 18.788294228055936,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 29.966648127543394,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 29.966648127543394,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 15.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 15.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 32.03123475609393,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 32.03123475609393,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 1.4699999999999998,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 4.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 5.664079801697712,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 13.416407864998739,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 15.91614274879438,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 22.80350850198276,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 25.963154661943527,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 38.72983346207417,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 42.653582499011726,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 4.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 4.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 13.416407864998739,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 13.416407864998739,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 29.0516780926679,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 29.0516780926679,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 48.041648597857254,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 48.041648597857254,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 10.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 10.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 22.891046284519195,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 22.891046284519195,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 46.17358552246078,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 46.17358552246078,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 28.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 28.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 3.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 4.96,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 11.40175425099138,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 13.876714308509776,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 26.758176320519304,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 30.32369370640721,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 44.429719783046124,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 48.79763928716224,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 69.92138442565336,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 75.31463602780006,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 1.9599999999999997,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 5.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 7.230712274734765,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 16.401219466856727,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 19.75364270204359,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 34.9857113690718,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 39.55364964197362,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 57.96550698475775,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 63.84745570498484,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 5.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 5.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 16.401219466856727,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 16.401219466856727,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 34.9857113690718,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 34.9857113690718,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 66.2117814289874,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 66.2117814289874,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 21.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 21.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 43.657759905886145,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 43.657759905886145,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 4.242640687119285,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 4.242640687119285,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 7.3484692283495345,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 7.3484692283495345,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 12.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 12.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 9.797958971132712,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 9.797958971132712,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 13.856406460551018,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 13.856406460551018,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 17.320508075688775,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 17.320508075688775,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 2.0999999999999996,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 5.656854249492381,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 6.72532527094415,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 9.797958971132712,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 11.263658375501274,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 16.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 17.701129907438112,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 5.656854249492381,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 5.656854249492381,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 15.684387141358123,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 15.684387141358123,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 23.57965224510319,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 23.57965224510319,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 12.24744871391589,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 12.24744871391589,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 27.055498516937366,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 27.055498516937366,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 4.242640687119285,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 4.242640687119285,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 7.3484692283495345,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 7.3484692283495345,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 12.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 12.0,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 16.97056274847714,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 16.97056274847714,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 9.797958971132712,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 9.797958971132712,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 13.856406460551018,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 13.856406460551018,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 21.908902300206645,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 21.908902300206645,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 17.320508075688775,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 17.320508075688775,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 24.49489742783178,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 24.49489742783178,
+      "exact_closure": false,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": false,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 0,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 1,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 2,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 3,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.0,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "level": 4,
+      "charge": 0.7,
+      "guaranteed": true,
+      "residual_frobenius": 0.0,
+      "exact_closure": true,
+      "consistent_with_theorem": true
+    }
+  ],
+  "n_filtered_checks": 540,
+  "n_guaranteed_checks": 366,
+  "n_guaranteed_exact": 366,
+  "remainders": [
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 2,
+      "k_max": 1,
+      "n_terms": 1,
+      "coefficient_max": 3.0,
+      "coefficient_l1": 3.0,
+      "coefficient_l2": 3.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -3.0,
+          "coefficient_abs": 3.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 3,
+      "k_max": 2,
+      "n_terms": 1,
+      "coefficient_max": 4.0,
+      "coefficient_l1": 4.0,
+      "coefficient_l2": 4.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 4,
+      "k_max": 3,
+      "n_terms": 1,
+      "coefficient_max": 5.0,
+      "coefficient_l1": 5.0,
+      "coefficient_l2": 5.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[4]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -4,
+            4
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=3: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 6,
+      "k_max": 5,
+      "n_terms": 1,
+      "coefficient_max": 7.0,
+      "coefficient_l1": 7.0,
+      "coefficient_l2": 7.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[6]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -6,
+            6
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=5: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 8,
+      "k_max": 7,
+      "n_terms": 1,
+      "coefficient_max": 9.0,
+      "coefficient_l1": 9.0,
+      "coefficient_l2": 9.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-8]*alpha[8]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -8,
+            8
+          ],
+          "creation_level": 8,
+          "edge_support_reason": "oscillator index exceeds K_max=7: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "mode_cutoff": 12,
+      "k_max": 11,
+      "n_terms": 1,
+      "coefficient_max": 13.0,
+      "coefficient_l1": 13.0,
+      "coefficient_l2": 13.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-12]*alpha[12]",
+          "coefficient": -13.0,
+          "coefficient_abs": 13.0,
+          "oscillator_indices": [
+            -12,
+            12
+          ],
+          "creation_level": 12,
+          "edge_support_reason": "oscillator index exceeds K_max=11: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 2,
+      "k_max": 0,
+      "n_terms": 2,
+      "coefficient_max": 4.0,
+      "coefficient_l1": 7.0,
+      "coefficient_l2": 5.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[1]",
+          "coefficient": -3.0,
+          "coefficient_abs": 3.0,
+          "oscillator_indices": [
+            -1,
+            1
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 3,
+      "k_max": 1,
+      "n_terms": 2,
+      "coefficient_max": 5.0,
+      "coefficient_l1": 9.0,
+      "coefficient_l2": 6.4031242374328485,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 4,
+      "k_max": 2,
+      "n_terms": 2,
+      "coefficient_max": 6.0,
+      "coefficient_l1": 11.0,
+      "coefficient_l2": 7.810249675906654,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[4]",
+          "coefficient": -6.0,
+          "coefficient_abs": 6.0,
+          "oscillator_indices": [
+            -4,
+            4
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 6,
+      "k_max": 4,
+      "n_terms": 2,
+      "coefficient_max": 8.0,
+      "coefficient_l1": 15.0,
+      "coefficient_l2": 10.63014581273465,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[6]",
+          "coefficient": -8.0,
+          "coefficient_abs": 8.0,
+          "oscillator_indices": [
+            -6,
+            6
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-5]*alpha[5]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -5,
+            5
+          ],
+          "creation_level": 5,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 8,
+      "k_max": 6,
+      "n_terms": 2,
+      "coefficient_max": 10.0,
+      "coefficient_l1": 19.0,
+      "coefficient_l2": 13.45362404707371,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-8]*alpha[8]",
+          "coefficient": -10.0,
+          "coefficient_abs": 10.0,
+          "oscillator_indices": [
+            -8,
+            8
+          ],
+          "creation_level": 8,
+          "edge_support_reason": "oscillator index exceeds K_max=6: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-7]*alpha[7]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -7,
+            7
+          ],
+          "creation_level": 7,
+          "edge_support_reason": "oscillator index exceeds K_max=6: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -2,
+      "mode_cutoff": 12,
+      "k_max": 10,
+      "n_terms": 2,
+      "coefficient_max": 14.0,
+      "coefficient_l1": 27.0,
+      "coefficient_l2": 19.1049731745428,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-12]*alpha[12]",
+          "coefficient": -14.0,
+          "coefficient_abs": 14.0,
+          "oscillator_indices": [
+            -12,
+            12
+          ],
+          "creation_level": 12,
+          "edge_support_reason": "oscillator index exceeds K_max=10: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-11]*alpha[11]",
+          "coefficient": -13.0,
+          "coefficient_abs": 13.0,
+          "oscillator_indices": [
+            -11,
+            11
+          ],
+          "creation_level": 11,
+          "edge_support_reason": "oscillator index exceeds K_max=10: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 2,
+      "k_max": -1,
+      "n_terms": 3,
+      "coefficient_max": 5.0,
+      "coefficient_l1": 12.0,
+      "coefficient_l2": 7.0710678118654755,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "K_max=-1 < 0: no guaranteed filtered domain at Lambda=2"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[1]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -1,
+            1
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "K_max=-1 < 0: no guaranteed filtered domain at Lambda=2"
+        },
+        {
+          "normal_ordered_monomial": "alpha[0]*alpha[0]",
+          "coefficient": -3.0,
+          "coefficient_abs": 3.0,
+          "oscillator_indices": [
+            0,
+            0
+          ],
+          "creation_level": 0,
+          "edge_support_reason": "K_max=-1 < 0: no guaranteed filtered domain at Lambda=2"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 3,
+      "k_max": 0,
+      "n_terms": 3,
+      "coefficient_max": 6.0,
+      "coefficient_l1": 15.0,
+      "coefficient_l2": 8.774964387392123,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -6.0,
+          "coefficient_abs": 6.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[1]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -1,
+            1
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 4,
+      "k_max": 1,
+      "n_terms": 3,
+      "coefficient_max": 7.0,
+      "coefficient_l1": 18.0,
+      "coefficient_l2": 10.488088481701515,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[4]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -4,
+            4
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -6.0,
+          "coefficient_abs": 6.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 6,
+      "k_max": 3,
+      "n_terms": 3,
+      "coefficient_max": 9.0,
+      "coefficient_l1": 24.0,
+      "coefficient_l2": 13.92838827718412,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[6]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -6,
+            6
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=3: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-5]*alpha[5]",
+          "coefficient": -8.0,
+          "coefficient_abs": 8.0,
+          "oscillator_indices": [
+            -5,
+            5
+          ],
+          "creation_level": 5,
+          "edge_support_reason": "oscillator index exceeds K_max=3: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[4]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -4,
+            4
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=3: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 8,
+      "k_max": 5,
+      "n_terms": 3,
+      "coefficient_max": 11.0,
+      "coefficient_l1": 30.0,
+      "coefficient_l2": 17.378147196982766,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-8]*alpha[8]",
+          "coefficient": -11.0,
+          "coefficient_abs": 11.0,
+          "oscillator_indices": [
+            -8,
+            8
+          ],
+          "creation_level": 8,
+          "edge_support_reason": "oscillator index exceeds K_max=5: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-7]*alpha[7]",
+          "coefficient": -10.0,
+          "coefficient_abs": 10.0,
+          "oscillator_indices": [
+            -7,
+            7
+          ],
+          "creation_level": 7,
+          "edge_support_reason": "oscillator index exceeds K_max=5: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[6]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -6,
+            6
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=5: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -3,
+      "mode_cutoff": 12,
+      "k_max": 9,
+      "n_terms": 3,
+      "coefficient_max": 15.0,
+      "coefficient_l1": 42.0,
+      "coefficient_l2": 24.289915602982237,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-12]*alpha[12]",
+          "coefficient": -15.0,
+          "coefficient_abs": 15.0,
+          "oscillator_indices": [
+            -12,
+            12
+          ],
+          "creation_level": 12,
+          "edge_support_reason": "oscillator index exceeds K_max=9: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-11]*alpha[11]",
+          "coefficient": -14.0,
+          "coefficient_abs": 14.0,
+          "oscillator_indices": [
+            -11,
+            11
+          ],
+          "creation_level": 11,
+          "edge_support_reason": "oscillator index exceeds K_max=9: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-10]*alpha[10]",
+          "coefficient": -13.0,
+          "coefficient_abs": 13.0,
+          "oscillator_indices": [
+            -10,
+            10
+          ],
+          "creation_level": 10,
+          "edge_support_reason": "oscillator index exceeds K_max=9: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 2,
+      "k_max": -2,
+      "n_terms": 4,
+      "coefficient_max": 8.0,
+      "coefficient_l1": 21.0,
+      "coefficient_l2": 11.180339887498949,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[1]",
+          "coefficient": -8.0,
+          "coefficient_abs": 8.0,
+          "oscillator_indices": [
+            -1,
+            1
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "K_max=-2 < 0: no guaranteed filtered domain at Lambda=2"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -6.0,
+          "coefficient_abs": 6.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "K_max=-2 < 0: no guaranteed filtered domain at Lambda=2"
+        },
+        {
+          "normal_ordered_monomial": "alpha[0]*alpha[0]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            0,
+            0
+          ],
+          "creation_level": 0,
+          "edge_support_reason": "K_max=-2 < 0: no guaranteed filtered domain at Lambda=2"
+        },
+        {
+          "normal_ordered_monomial": "1",
+          "coefficient": -3.0,
+          "coefficient_abs": 3.0,
+          "oscillator_indices": [],
+          "creation_level": 0,
+          "edge_support_reason": "scalar_term"
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 3,
+      "k_max": -1,
+      "n_terms": 4,
+      "coefficient_max": 7.0,
+      "coefficient_l1": 22.0,
+      "coefficient_l2": 11.224972160321824,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "K_max=-1 < 0: no guaranteed filtered domain at Lambda=3"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -6.0,
+          "coefficient_abs": 6.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "K_max=-1 < 0: no guaranteed filtered domain at Lambda=3"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[1]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -1,
+            1
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "K_max=-1 < 0: no guaranteed filtered domain at Lambda=3"
+        },
+        {
+          "normal_ordered_monomial": "alpha[0]*alpha[0]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            0,
+            0
+          ],
+          "creation_level": 0,
+          "edge_support_reason": "K_max=-1 < 0: no guaranteed filtered domain at Lambda=3"
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 4,
+      "k_max": 0,
+      "n_terms": 4,
+      "coefficient_max": 8.0,
+      "coefficient_l1": 26.0,
+      "coefficient_l2": 13.19090595827292,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[4]",
+          "coefficient": -8.0,
+          "coefficient_abs": 8.0,
+          "oscillator_indices": [
+            -4,
+            4
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[2]",
+          "coefficient": -6.0,
+          "coefficient_abs": 6.0,
+          "oscillator_indices": [
+            -2,
+            2
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[1]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -1,
+            1
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 6,
+      "k_max": 2,
+      "n_terms": 4,
+      "coefficient_max": 10.0,
+      "coefficient_l1": 34.0,
+      "coefficient_l2": 17.146428199482248,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[6]",
+          "coefficient": -10.0,
+          "coefficient_abs": 10.0,
+          "oscillator_indices": [
+            -6,
+            6
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-5]*alpha[5]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -5,
+            5
+          ],
+          "creation_level": 5,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[4]",
+          "coefficient": -8.0,
+          "coefficient_abs": 8.0,
+          "oscillator_indices": [
+            -4,
+            4
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[3]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -3,
+            3
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 8,
+      "k_max": 4,
+      "n_terms": 4,
+      "coefficient_max": 12.0,
+      "coefficient_l1": 42.0,
+      "coefficient_l2": 21.118712081942874,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-8]*alpha[8]",
+          "coefficient": -12.0,
+          "coefficient_abs": 12.0,
+          "oscillator_indices": [
+            -8,
+            8
+          ],
+          "creation_level": 8,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-7]*alpha[7]",
+          "coefficient": -11.0,
+          "coefficient_abs": 11.0,
+          "oscillator_indices": [
+            -7,
+            7
+          ],
+          "creation_level": 7,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[6]",
+          "coefficient": -10.0,
+          "coefficient_abs": 10.0,
+          "oscillator_indices": [
+            -6,
+            6
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-5]*alpha[5]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -5,
+            5
+          ],
+          "creation_level": 5,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "n": -4,
+      "mode_cutoff": 12,
+      "k_max": 8,
+      "n_terms": 4,
+      "coefficient_max": 16.0,
+      "coefficient_l1": 58.0,
+      "coefficient_l2": 29.086079144497972,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-12]*alpha[12]",
+          "coefficient": -16.0,
+          "coefficient_abs": 16.0,
+          "oscillator_indices": [
+            -12,
+            12
+          ],
+          "creation_level": 12,
+          "edge_support_reason": "oscillator index exceeds K_max=8: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-11]*alpha[11]",
+          "coefficient": -15.0,
+          "coefficient_abs": 15.0,
+          "oscillator_indices": [
+            -11,
+            11
+          ],
+          "creation_level": 11,
+          "edge_support_reason": "oscillator index exceeds K_max=8: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-10]*alpha[10]",
+          "coefficient": -14.0,
+          "coefficient_abs": 14.0,
+          "oscillator_indices": [
+            -10,
+            10
+          ],
+          "creation_level": 10,
+          "edge_support_reason": "oscillator index exceeds K_max=8: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-9]*alpha[9]",
+          "coefficient": -13.0,
+          "coefficient_abs": 13.0,
+          "oscillator_indices": [
+            -9,
+            9
+          ],
+          "creation_level": 9,
+          "edge_support_reason": "oscillator index exceeds K_max=8: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 2,
+      "k_max": 1,
+      "n_terms": 1,
+      "coefficient_max": 3.0,
+      "coefficient_l1": 3.0,
+      "coefficient_l2": 3.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[2]",
+          "coefficient": -3.0,
+          "coefficient_abs": 3.0,
+          "oscillator_indices": [
+            -1,
+            2
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 3,
+      "k_max": 2,
+      "n_terms": 1,
+      "coefficient_max": 4.0,
+      "coefficient_l1": 4.0,
+      "coefficient_l2": 4.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[3]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -2,
+            3
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 4,
+      "k_max": 3,
+      "n_terms": 1,
+      "coefficient_max": 5.0,
+      "coefficient_l1": 5.0,
+      "coefficient_l2": 5.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[4]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -3,
+            4
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=3: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 6,
+      "k_max": 5,
+      "n_terms": 1,
+      "coefficient_max": 7.0,
+      "coefficient_l1": 7.0,
+      "coefficient_l2": 7.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-5]*alpha[6]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -5,
+            6
+          ],
+          "creation_level": 5,
+          "edge_support_reason": "oscillator index exceeds K_max=5: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 8,
+      "k_max": 7,
+      "n_terms": 1,
+      "coefficient_max": 9.0,
+      "coefficient_l1": 9.0,
+      "coefficient_l2": 9.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-7]*alpha[8]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -7,
+            8
+          ],
+          "creation_level": 7,
+          "edge_support_reason": "oscillator index exceeds K_max=7: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": -1,
+      "mode_cutoff": 12,
+      "k_max": 11,
+      "n_terms": 1,
+      "coefficient_max": 13.0,
+      "coefficient_l1": 13.0,
+      "coefficient_l2": 13.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-11]*alpha[12]",
+          "coefficient": -13.0,
+          "coefficient_abs": 13.0,
+          "oscillator_indices": [
+            -11,
+            12
+          ],
+          "creation_level": 11,
+          "edge_support_reason": "oscillator index exceeds K_max=11: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 2,
+      "k_max": 0,
+      "n_terms": 2,
+      "coefficient_max": 4.0,
+      "coefficient_l1": 7.0,
+      "coefficient_l2": 5.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[2]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -1,
+            2
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[0]*alpha[1]",
+          "coefficient": -3.0,
+          "coefficient_abs": 3.0,
+          "oscillator_indices": [
+            0,
+            1
+          ],
+          "creation_level": 0,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 3,
+      "k_max": 1,
+      "n_terms": 2,
+      "coefficient_max": 5.0,
+      "coefficient_l1": 9.0,
+      "coefficient_l2": 6.4031242374328485,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[3]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -2,
+            3
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-1]*alpha[2]",
+          "coefficient": -4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -1,
+            2
+          ],
+          "creation_level": 1,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 4,
+      "k_max": 2,
+      "n_terms": 2,
+      "coefficient_max": 6.0,
+      "coefficient_l1": 11.0,
+      "coefficient_l2": 7.810249675906654,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[4]",
+          "coefficient": -6.0,
+          "coefficient_abs": 6.0,
+          "oscillator_indices": [
+            -3,
+            4
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[3]",
+          "coefficient": -5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -2,
+            3
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 6,
+      "k_max": 4,
+      "n_terms": 2,
+      "coefficient_max": 8.0,
+      "coefficient_l1": 15.0,
+      "coefficient_l2": 10.63014581273465,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-5]*alpha[6]",
+          "coefficient": -8.0,
+          "coefficient_abs": 8.0,
+          "oscillator_indices": [
+            -5,
+            6
+          ],
+          "creation_level": 5,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[5]",
+          "coefficient": -7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -4,
+            5
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 8,
+      "k_max": 6,
+      "n_terms": 2,
+      "coefficient_max": 10.0,
+      "coefficient_l1": 19.0,
+      "coefficient_l2": 13.45362404707371,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-7]*alpha[8]",
+          "coefficient": -10.0,
+          "coefficient_abs": 10.0,
+          "oscillator_indices": [
+            -7,
+            8
+          ],
+          "creation_level": 7,
+          "edge_support_reason": "oscillator index exceeds K_max=6: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[7]",
+          "coefficient": -9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -6,
+            7
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=6: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "n": -2,
+      "mode_cutoff": 12,
+      "k_max": 10,
+      "n_terms": 2,
+      "coefficient_max": 14.0,
+      "coefficient_l1": 27.0,
+      "coefficient_l2": 19.1049731745428,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-11]*alpha[12]",
+          "coefficient": -14.0,
+          "coefficient_abs": 14.0,
+          "oscillator_indices": [
+            -11,
+            12
+          ],
+          "creation_level": 11,
+          "edge_support_reason": "oscillator index exceeds K_max=10: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        },
+        {
+          "normal_ordered_monomial": "alpha[-10]*alpha[11]",
+          "coefficient": -13.0,
+          "coefficient_abs": 13.0,
+          "oscillator_indices": [
+            -10,
+            11
+          ],
+          "creation_level": 10,
+          "edge_support_reason": "oscillator index exceeds K_max=10: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 2,
+      "k_max": 0,
+      "n_terms": 1,
+      "coefficient_max": 3.0,
+      "coefficient_l1": 3.0,
+      "coefficient_l2": 3.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-2]*alpha[1]",
+          "coefficient": 3.0,
+          "coefficient_abs": 3.0,
+          "oscillator_indices": [
+            -2,
+            1
+          ],
+          "creation_level": 2,
+          "edge_support_reason": "oscillator index exceeds K_max=0: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 3,
+      "k_max": 1,
+      "n_terms": 1,
+      "coefficient_max": 4.0,
+      "coefficient_l1": 4.0,
+      "coefficient_l2": 4.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-3]*alpha[2]",
+          "coefficient": 4.0,
+          "coefficient_abs": 4.0,
+          "oscillator_indices": [
+            -3,
+            2
+          ],
+          "creation_level": 3,
+          "edge_support_reason": "oscillator index exceeds K_max=1: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 4,
+      "k_max": 2,
+      "n_terms": 1,
+      "coefficient_max": 5.0,
+      "coefficient_l1": 5.0,
+      "coefficient_l2": 5.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-4]*alpha[3]",
+          "coefficient": 5.0,
+          "coefficient_abs": 5.0,
+          "oscillator_indices": [
+            -4,
+            3
+          ],
+          "creation_level": 4,
+          "edge_support_reason": "oscillator index exceeds K_max=2: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 6,
+      "k_max": 4,
+      "n_terms": 1,
+      "coefficient_max": 7.0,
+      "coefficient_l1": 7.0,
+      "coefficient_l2": 7.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-6]*alpha[5]",
+          "coefficient": 7.0,
+          "coefficient_abs": 7.0,
+          "oscillator_indices": [
+            -6,
+            5
+          ],
+          "creation_level": 6,
+          "edge_support_reason": "oscillator index exceeds K_max=4: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 8,
+      "k_max": 6,
+      "n_terms": 1,
+      "coefficient_max": 9.0,
+      "coefficient_l1": 9.0,
+      "coefficient_l2": 9.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-8]*alpha[7]",
+          "coefficient": 9.0,
+          "coefficient_abs": 9.0,
+          "oscillator_indices": [
+            -8,
+            7
+          ],
+          "creation_level": 8,
+          "edge_support_reason": "oscillator index exceeds K_max=6: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "n": 1,
+      "mode_cutoff": 12,
+      "k_max": 10,
+      "n_terms": 1,
+      "coefficient_max": 13.0,
+      "coefficient_l1": 13.0,
+      "coefficient_l2": 13.0,
+      "terms": [
+        {
+          "normal_ordered_monomial": "alpha[-12]*alpha[11]",
+          "coefficient": 13.0,
+          "coefficient_abs": 13.0,
+          "oscillator_indices": [
+            -12,
+            11
+          ],
+          "creation_level": 12,
+          "edge_support_reason": "oscillator index exceeds K_max=10: closure is guaranteed only on F^(<=K) with K + m_- + n_- <= Lambda"
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 2,
+      "k_max": 2,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 3,
+      "k_max": 3,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 4,
+      "k_max": 4,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 6,
+      "k_max": 6,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 8,
+      "k_max": 8,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "mode_cutoff": 12,
+      "k_max": 12,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 2,
+      "k_max": -2,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 3,
+      "k_max": -1,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 4,
+      "k_max": 0,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 6,
+      "k_max": 2,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 8,
+      "k_max": 4,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    },
+    {
+      "m": -3,
+      "n": -1,
+      "mode_cutoff": 12,
+      "k_max": 8,
+      "n_terms": 0,
+      "coefficient_max": 0.0,
+      "coefficient_l1": 0.0,
+      "coefficient_l2": 0.0,
+      "terms": []
+    }
+  ]
+}

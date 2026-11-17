@@ -1,0 +1,65 @@
+{
+  "matplotlib_version": "3.10.8",
+  "figures": [
+    {
+      "figure": 1,
+      "file": "regulator_and_pairing.pdf",
+      "width_inches": 5.6,
+      "height_inches": 3.1,
+      "manuscript_width_inches": 5.595590551181102,
+      "effective_axis_label_points": 10.491732283464566,
+      "effective_tick_label_points": 9.49251968503937,
+      "effective_legend_points": 9.49251968503937,
+      "panel_count": 2,
+      "text_bounds_checked": true
+    },
+    {
+      "figure": 2,
+      "file": "predarboux_width.pdf",
+      "width_inches": 5.6,
+      "height_inches": 2.9,
+      "manuscript_width_inches": 5.595590551181102,
+      "effective_axis_label_points": 10.491732283464566,
+      "effective_tick_label_points": 9.49251968503937,
+      "effective_legend_points": 9.49251968503937,
+      "panel_count": 2,
+      "text_bounds_checked": true
+    },
+    {
+      "figure": 3,
+      "file": "architecture_symmetries.pdf",
+      "width_inches": 5.6,
+      "height_inches": 5.35,
+      "manuscript_width_inches": 5.595590551181102,
+      "effective_axis_label_points": 10.491732283464566,
+      "effective_tick_label_points": 9.49251968503937,
+      "effective_legend_points": 9.49251968503937,
+      "panel_count": 4,
+      "text_bounds_checked": true
+    },
+    {
+      "figure": 4,
+      "file": "tt_geometry.pdf",
+      "width_inches": 5.6,
+      "height_inches": 3.0,
+      "manuscript_width_inches": 5.595590551181102,
+      "effective_axis_label_points": 10.491732283464566,
+      "effective_tick_label_points": 9.49251968503937,
+      "effective_legend_points": 9.49251968503937,
+      "panel_count": 2,
+      "text_bounds_checked": true
+    },
+    {
+      "figure": 6,
+      "file": "ns_two_constructions.pdf",
+      "width_inches": 5.6,
+      "height_inches": 3.0,
+      "manuscript_width_inches": 5.595590551181102,
+      "effective_axis_label_points": 10.491732283464566,
+      "effective_tick_label_points": 9.49251968503937,
+      "effective_legend_points": 9.49251968503937,
+      "panel_count": 3,
+      "text_bounds_checked": true
+    }
+  ]
+}

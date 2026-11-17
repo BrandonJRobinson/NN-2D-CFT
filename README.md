@@ -1,103 +1,125 @@
 # Neural Network Models of 2D Conformal Field Theory
 
-**Authors**: Brandon Robinson
+Code and computational evidence for Brandon Robinson,
+*Virasoro Symmetry in Neural Network Field Theories*
+([arXiv:2512.24420](https://arxiv.org/abs/2512.24420)).
 
-**Institution**: University of Amsterdam
+The November 2026 update accompanies the revised JHEP manuscript. Its central
+result is the construction of the chiral current pairing and Virasoro
+representation from specified neural architectures and parameter laws.
+The April scripts, notebooks and figures remain in their original locations.
+Their original documentation is preserved in [legacy/april_2026](legacy/april_2026/).
 
-**Date**: April 2026
+## Contents
 
-## Overview
+- [src/nnft_virasoro](src/nnft_virasoro/), scripts, configs and tests:
+  the complete September code export from generation commit
+  2900ae4aa10ff33ecf88a527e9cf633f0185f98c. PROVENANCE.json records
+  all 78 exact source hashes and original Git blob identifiers.
+- [September results](results/jhep_submission_hardening/):
+  all 377 original manifested artifacts, with configuration hash
+  f51ad38719b59543, preserved byte-for-byte.
+- [Earlier frozen results](results/jhep_frozen/) and the historical frozen
+  manuscript: the earlier baseline, retained with its original provenance.
+- [November 7 review](review_20261107/): independent regulator and finite-block
+  statistical checks. CORRECTIONS.md records the TT calibration correction
+  separately from the original data. The boundary and recovered_physics
+  subdirectories contain boundary evidence and exact sector checks.
+- [November Fock and Ward evidence](evidence/major_revision/):
+  twenty saved pairing matrices, finite Fock-projection diagnostics,
+  historical absolute Ward errors and the exact phase-integrated benchmark.
+  Conditional-field and full-ensemble statistics are saved separately.
+- [Four-point width evidence](evidence/four_point_width/): saved cumulant
+  data and source code. The connected scalar four-point function scales
+  as 1/N at fixed regulator; the full function approaches Wick contractions.
+- [Current figures](evidence/figures/) and
+  [figure sources](evidence/figure_sources/): vector figures, plotted data,
+  and redraw scripts, preserving the enlarged labels.
 
-This repository contains neural network implementations of 2D conformal field theories (CFTs), centered on the **free boson** (c=1) and its supersymmetric extensions. The core innovation is a **variance-reduced simulation framework** that replaces stochastic angular sampling with deterministic Bessel function evaluation, yielding high-precision verification of CFT correlators, operator algebras, and boundary conditions.
+Historical reports and Draft-JHEP-Frozen.tex describe earlier stages and
+contain claims superseded by the revised manuscript. Interpret them with
+the dated corrections and November evidence.
 
-## Key Results
+## Verify without simulation
 
-### Summary of Observables
+    git clone https://github.com/BrandonJRobinson/NN-2D-CFT.git
+    cd NN-2D-CFT
+    python3 verify_release.py
+    python3 review_20261107/boundary/verify_boundary_evidence.py
+    python3 review_20261107/recovered_physics/verify_files.py
 
-| Observable | Theory Target | Error / Accuracy | Method |
-|------------|--------------|------------------|--------|
-| Vertex operators `⟨V_α V_-α⟩` | `r^(-α²)` | **0.03–3.4%** | Structure function (original) |
-| Stress tensor `⟨TT⟩ = B²/128` | `c/(2r⁴)`, c=1 |**99.6%** | Deterministic Bessel J₂ |
-| Super-Virasoro fermion `⟨ψψ⟩` | `1/r` | **99.5%**  | Deterministic Bessel J₁ |
-| Super-Virasoro boson `⟨∂φ∂φ⟩` | `1/r²` | **~95.1%**  | Deterministic Bessel J₂ |
-| Supercurrent `⟨GG⟩` (Wick) | `1/r³` | **~96.5%**  | Wick factorization |
-| Boundary boson (Neumann) | `-ln(2y)` slope | **99.8%**  | Method of images |
-| Boundary fermion (Reflection) | `1/r` | **99.5**  | Deterministic Bessel J₁ |
-| N=1 scalar multiplet (boundary) | `1/r`, `1/r²`, `1/r³` | **>96%**  | Method of images + Wick |
+The root verifier checks the current payload, all 377 original September
+artifacts and all 78 exact exported sources using only the standard library.
+Original data retain their generation provenance.
 
+## Installation and scientific tests
 
-### Variance Reduction Technique
+Use Python 3.10 or newer for the current package.
 
-The key methodological advance replaces stochastic angular integration (4-clock sampling) with **analytically exact Bessel function evaluation**:
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -r requirements.txt
+    python verify_release.py --restore-archive-times
+    python -m pytest tests -q
 
-- **Fermion sector**: `∫₀²π dθ/(2π) e^{-iθ} sin(kr cosθ) = J₁(kr)` — eliminates angular noise entirely
-- **Boson sector**: `∫₀²π dθ/(2π) e^{-2iθ} cos(kr cosθ) = -J₂(kr)` — eliminates angular noise entirely
-- **Stratified k-sampling**: log-uniform stratification further reduces radial variance
+Timestamp normalization follows checksum verification, accommodates the
+legacy figure-freshness test after checkout or extraction, and changes no
+content. The original suite contains 215 tests. Archive-only instructions
+are in INSTALLATION.md.
 
-## Repository Structure
+## Reproduce analyses
 
-```
-.
-├── README.md                                    # This file
-├── INSTALLATION.md                              # Setup instructions
-├── requirements.txt                             # Python dependencies
-├── experiments/
-│   ├── README.md                                # Detailed experiment documentation
-│   ├── variance_reduced_correlators.ipynb        # ★ All variance-reduced simulations
-│   ├── vertex_operator.py                       # Vertex operators (original, 0.03–3.4%)
-│   ├── free_boson.py                            # Current correlators (original, ~30%)
-│   ├── vertex_precision.png                     # Vertex operator result figure
-│   └── current_verify_OPTIMIZED.png             # Current correlator result figure
-├── figures/
-│   ├── vertex_precision.pdf                     # Vertex operator (publication)
-│   ├── super_virasoro_variance_reduced.pdf      # ★ Super-Virasoro verification
-│   ├── stress_tensor_TT_variance_reduced.pdf    # ★ Stress tensor ⟨TT⟩ / central charge
-│   ├── super_boundary_multiplet_variance_reduced.pdf  # ★ N=1 boundary multiplet
-│   ├── separate_boundary_tests_variance_reduced_1.pdf # ★ Boundary condition tests
-│   └── gaussianity_check.pdf                    # Field Gaussianity verification
-```
+    python review_20261107/independent_audit.py
 
-## Quick Start
+For the current Fock, phase-quadrature, exact symbolic and four-point checks, run:
 
-### Installation
-```bash
-# Clone repository
-git clone [repository-url]
-cd NN-2D-CFT
+    python review_20261117/verify_current.py
 
-# Install dependencies
-pip install numpy matplotlib scipy tqdm
+This writes only beneath review_20261117/rerun/. The full phase benchmark is separate.
+The completed checks are recorded in [VALIDATION.json](review_20261117/VALIDATION.json).
 
-# Optional: for Jupyter notebooks
-pip install jupyter
-```
+The November 7 audit recalculates finite-block TT inference and regulator checks from saved
+inputs and writes only beneath review_20261107/rerun/.
 
-### Run the Variance-Reduced Simulations
-```bash
-cd experiments
-jupyter notebook variance_reduced_correlators.ipynb
-```
+The saved tapered-window fourth-cumulant exponent is -0.9951 +/- 0.0092
+over widths 8, 16, 32, 64 and 128, consistent with the exact
+kappa_4 = -3 sigma_phi^4/(8 N). Standardized excess kurtosis is -3/(2 N).
 
-Each cell in the notebook is a self-contained simulation:
-1. **N=1 Scalar Multiplet with Boundary** — boundary fermion, boson, and supercurrent
-2. **Boundary Conditions via Method of Images** — Neumann boson + fermionic reflection
-3. **Super-Virasoro Algebra** — bulk fermion (J₁), boson (J₂), and supercurrent (Wick)
-4. **Stress Tensor OPE** — central charge extraction via ⟨TT⟩ = B²/128
+The [November analysis instructions](evidence/major_revision/README.txt)
+describe the Fock and exact-phase calculations and record their package
+versions. The complete prescribed exact-phase benchmark may take time;
+every saved seed/probe and the independent phase-quadrature checks are
+included. Regenerate outputs in a fresh copy to retain the frozen evidence.
 
-### Run the Original Scripts
-```bash
-python vertex_operator.py     # Vertex operators (0.03–3.4% error)
-python free_boson.py           # Current correlators (~30% error)
-```
+The full September production runner is:
 
-## References
+    python scripts/run_jhep_submission_hardening.py --config configs/jhep_submission_hardening.yaml
 
-- **Di Francesco, Mathieu, Sénéchal** — *Conformal Field Theory* (vertex operators, stress tensor)
-- **Polchinski** — *String Theory Vol. 1* (boson CFT, normal ordering)
-- **Ginsparg** — *Applied Conformal Field Theory* (structure functions, Ward identities)
+Production campaigns can take substantial compute and overwrite configured
+outputs. Run them in a fresh copy. The quick option is a smoke run.
 
----
+## Interpretation
 
-**Last Updated**: April 2026
-**Python Version**: 3.8+
-**Dependencies**: NumPy, Matplotlib, SciPy, tqdm
+Finite Fock readouts use the explicit pairing projection and require a
+positive Hermitian mixed block. Nineteen of the twenty saved projected
+readouts are positive; the remaining sample is retained as a failure.
+Raw kernel and Ward comparisons use the original neural ensemble.
+
+The historical Gaussian Ward proxy has appreciable absolute errors.
+The exact-phase benchmark distinguishes conditional errors from the
+weighted full-ensemble ratio, with its prescribed probes and regulator.
+
+Finite-width cumulants measure non-Gaussianity; a local-interaction
+interpretation requires additional physical input. Exact operator statements
+refer to the limiting chiral construction and stated finite-level support.
+
+## Citation and provenance
+
+Use CITATION.cff and cite the full repository commit used together with the
+manuscript. No archive DOI is asserted. The WZW extension is Capuozzo,
+Robinson and Suzzoni, [Learning from Duality in Neural Network Field
+Theories, arXiv:2611.21503](https://arxiv.org/abs/2611.21503).
+
+The provenance directory retains the dated local November 7 deposit-candidate
+metadata, including its historical licensing proposal. This update introduces
+no new license grant.

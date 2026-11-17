@@ -1,0 +1,337 @@
+# =====================================================================
+# Submission-hardening campaign (2026-09).
+# Separate namespace from the August frozen release, which is immutable at
+#   commit b3fd73dd887b92de783ee8d825075d66641c1436
+#   config 278e438b94465564
+# Geometry and seeds below deliberately MIRROR the frozen controls campaign so
+# that Gate 1/2 results are directly comparable to the frozen admissibility rows.
+# =====================================================================
+suite: jhep_submission_hardening
+version: 1
+
+global:
+  window_margin_uv: 30.0
+  window_margin_ir: 30.0
+  rho_reference: 2.0
+  # Four distinct columns; no column named "Lambda" carries two meanings.
+  #   lambda_ir / lambda_uv      : spectral cutoffs (momentum)
+  #   spectral_regulator_class   : sharp_annulus | tapered_log_window
+  #   mode_cutoff                : Laurent mode window L
+  spectral_regulator_classes:
+    sharp_annulus: 0.0
+    tapered_log_window: 0.15
+  algebra_level: 2
+  algebra_mode_span: 3
+  central_charge: 1.0
+
+named_seeds:
+  controls_s01: 20260301
+  controls_s02: 20260302
+  controls_s03: 20260303
+  controls_s04: 20260304
+  ward_s01: 20260501
+  ward_s02: 20260502
+  ward_s03: 20260503
+  ward_s04: 20260504
+  ward_s05: 20260505
+  ward_s06: 20260506
+  ns_s01: 20260601
+  ns_s02: 20260602
+  ns_s03: 20260603
+  ns_s04: 20260604
+  ns_s05: 20260605
+  ns_s06: 20260606
+  ns_s07: 20260607
+  ns_s08: 20260608
+  tt_s01: 20260401
+  tt_s02: 20260402
+  tt_s03: 20260403
+  tt_s04: 20260404
+  # tt_s05..tt_s12 mirror the frozen campaign's 12 TT blocks exactly, so the
+  # direct extension is blocked the same way the frozen result was.
+  tt_s05: 20260405
+  tt_s06: 20260406
+  tt_s07: 20260407
+  tt_s08: 20260408
+  tt_s09: 20260409
+  tt_s10: 20260410
+  tt_s11: 20260411
+  tt_s12: 20260412
+
+# ---------------------------------------------------------------------
+gate06:
+  # pure analytic / unit verification; no sampling
+  regulators: [[1.0e-2, 1.0e+2], [1.0e-3, 1.0e+3], [1.0e-4, 1.0e+4]]
+  tapers: [0.0, 0.15]
+  spin_two_kr: [0.5, 1.0, 3.0, 7.0]
+  spin_two_theta: [0.0, 0.7, 2.3]
+  mode_cutoff: 4
+  rho: 2.0
+  r0: 1.0
+  # C9: the pointwise regulated current kernel does NOT converge to the ideal
+  # 1/(z-w)^2 at fixed separation. Its UV tail oscillates with an envelope
+  # growing like sqrt(Lambda_UV), so the ideal limit is only meaningful AFTER
+  # ordered contour pairing (C10). Probed at a large cutoff where the
+  # subleading O(1/(Lambda r)) stationary-phase corrections are small.
+  uv_envelope_probe:
+    lambda_ir: 1.0e-2
+    lambda_uv: 1.0e+5
+    separations: [0.5, 1.0, 2.0]
+    periods: 20
+    tolerance: 0.05
+
+# ---------------------------------------------------------------------
+gate01:
+  # mirrors the frozen controls grid exactly
+  lambda_ir: 1.0e-2
+  lambda_uv: 1.0e+2
+  mode_cutoff: 4
+  r0: 1.0
+  rho: 2.0
+  n_features: [10000, 30000, 100000, 300000, 1000000]
+  seeds: [controls_s01, controls_s02, controls_s03, controls_s04]
+  architectures:
+    - selected_log_kernel
+    - rbf_gaussian_prior
+    - sign_breaking_mode_reassignment
+    - non_symplectic_dense_mixing
+    - local_exponent_direction
+    - phase_correlated_features
+    - anisotropic_angular_prior
+    - angular_mode_scramble
+  params:
+    anisotropy_amplitude: 0.6
+    local_exponent_epsilon: 0.5
+    mixing_condition_number: 8.0
+  persist_omega: true
+  # power-law fits are attempted only where justified; see gate01 summary
+  fit_min_widths: 3
+
+# ---------------------------------------------------------------------
+gate02:
+  # post-processes the Omega matrices persisted by gate01
+  architectures: [selected_log_kernel]
+  control_architectures: [rbf_gaussian_prior, sign_breaking_mode_reassignment]
+  mode_pairs: [[1, -1], [2, -2], [2, -1], [3, -2], [-2, 1], [2, 3]]
+  algebra_level: 2
+  charge: 0.0
+  # Controlled epsilon sweep of the stability theorem.
+  #
+  # This is a DIFFERENT five-decade sweep from the architecture grid, and the
+  # two must not be conflated (rule 11). Here the canonical pairing is perturbed
+  # directly, so epsilon is dialled over five decades at fixed mode cutoff; in
+  # the architecture grid it is the WIDTH that spans five decades and epsilon
+  # follows. The theorem ratio plateaus at O(1) in the first and is still
+  # climbing toward that plateau in the second.
+  epsilon_sweep:
+    epsilons: [1.0e-5, 1.0e-4, 1.0e-3, 1.0e-2, 1.0e-1]
+    n_directions: 12
+    direction_seed: 0
+    mode_cutoff: 4
+
+# ---------------------------------------------------------------------
+gate03:
+  # provenance audit of the frozen TT campaign; extension only if required
+  frozen_seed_rows: results/jhep_frozen/sampled_tt_seed_rows.csv
+  frozen_aggregate: results/jhep_frozen/sampled_tt_central_charge.csv
+  headline_value: 1.015713
+  headline_uncertainty: 0.011251
+  # Direct/Wick cumulant identity regression.
+  # The identity is an ALGEBRAIC property of the estimators and holds for any
+  # regulator. It is verified at a BENIGN cutoff (Lambda_UV = 3) because at the
+  # production cutoff (Lambda_UV = 1e2) every term is noise-dominated: the
+  # direct four-field estimator has per-sample variance ~ Var(d phi)^2 ~ 1e6,
+  # so at feasible M it returns O(1e3) where the true <TT> is O(0.2). That
+  # variance limitation is itself a Gate-3 finding and is reported separately.
+  identity_check:
+    lambda_ir: 0.3
+    lambda_uv: 3.0
+    taper: 0.0
+    n_features: 200
+    n_networks: [50000, 200000]
+    batch_size: 1024
+    n_circle_points: 8
+    circle_radius: 0.6
+    seeds: [tt_s01, tt_s02]
+    production_reference:
+      lambda_ir: 1.0e-2
+      lambda_uv: 1.0e+2
+      taper: 0.15
+
+  # Fit-weighting crosswalk (mission rule 11).
+  #
+  # The column `c_exp` is shared by two kinds of row that summarize the SAME
+  # c(r) curve with DIFFERENT weights over the fit window:
+  #   analytic_closed_kernel_reference : uniform weights (its stderrs are zero)
+  #   wick_factorized / direct_TT      : inverse-variance weights
+  # Inside [0.3, 0.55] the analytic c(r) spans 0.953-1.058, and the sampled
+  # weights are strongly non-uniform (the smallest separation carries ~57% of
+  # the weight), so the two summaries of one curve differ by ~2.2%. This is a
+  # definition mismatch, not a physical effect, and it must be crosswalked
+  # rather than compared silently.
+  weighting_crosswalk:
+    n_features: 250
+    n_networks: 400000
+    batch_size: 2048
+    seeds: [tt_s01]
+
+  # Regulator convergence of the analytic target: purely analytic, no sampling.
+  # Establishes that the window-summarized target tends to 1 as the cutoffs are
+  # removed, which is what makes c = 1 the ideal-limit statement.
+  regulator_convergence:
+    windows: [[1.0e-2, 1.0e+2], [1.0e-3, 1.0e+3], [1.0e-4, 1.0e+4],
+              [1.0e-5, 1.0e+5], [1.0e-6, 1.0e+6]]
+    taper: 0.15
+
+  # Direct-estimator extension.
+  #
+  # The mission permits extending direct Monte Carlo ONLY if the existing direct
+  # result cannot support the manuscript wording. It cannot: the frozen direct
+  # determination at the headline setting is c = 2.06 +/- 0.58, which neither
+  # establishes c = 1 nor excludes it, so the word "independent determination"
+  # in CLAIM-GATE FM-02/FM-07 is not currently carried by any assumption-free
+  # estimator. The Wick estimator is precise but presupposes the Gaussian
+  # factorization it would be testing.
+  #
+  # Block SE scales as M^-1/2 (verified: per-seed propagated stderr 3.07 vs
+  # observed across-seed scatter 2.00 => Monte Carlo dominated, not systematic).
+  # 133x the frozen M per block takes the block SE 0.577 -> 0.050.
+  # Geometry, regulator and fit window are the FROZEN ones, unchanged.
+  # The RNG stream label differs from the frozen run, so this is an independent
+  # draw rather than a correlated superset of the frozen samples.
+  direct_extension:
+    enabled: true
+    lambda_ir: 1.0e-2
+    lambda_uv: 1.0e+2
+    taper: 0.15
+    regulator_class: tapered_log_window
+    architecture: selected_log_kernel
+    n_features: 250
+    n_networks: 7980993          # 133 x the frozen 60000
+    batch_size: 2048
+    n_circle_points: 48
+    circle_radius: 0.6
+    fit_window: [0.3, 0.55]
+    frozen_n_networks: 60000
+    frozen_block_se: 0.576664
+    target_block_se: 0.050
+    n_workers: 12
+    seeds: [tt_s01, tt_s02, tt_s03, tt_s04, tt_s05, tt_s06,
+            tt_s07, tt_s08, tt_s09, tt_s10, tt_s11, tt_s12]
+
+# ---------------------------------------------------------------------
+gate04:
+  lambda_ir: 1.0e-2
+  lambda_uv: 1.0e+2
+  taper: 0.15
+  configurations:
+    two_vertex:
+      charges: [0.3, -0.3]
+      positions: [[0.85, 0.0], [-0.85, 0.0]]
+    three_vertex:
+      charges: [0.3, 0.3, -0.6]
+      positions: [[0.8, 0.0], [-0.4, 0.7], [-0.4, -0.7]]
+    four_vertex:
+      charges: [0.25, -0.25, 0.25, -0.25]
+      positions: [[0.9, 0.0], [0.0, 0.9], [-0.9, 0.0], [0.0, -0.9]]
+  probe_positions: [[0.0, 1.5], [1.7, 0.3], [-1.4, -0.9], [0.35, -1.8]]
+  deterministic_n_features: [500, 2000, 20000, 200000]
+  sampled_n_features: [500, 1000, 2000]
+  sampled_n_networks: [2000, 8000, 32000]
+  batch_size: 128
+  seeds: [ward_s01, ward_s02, ward_s03, ward_s04, ward_s05, ward_s06]
+  architectures: [selected_log_kernel, rbf_gaussian_prior, angular_mode_scramble,
+                  local_exponent_direction]
+  params:
+    local_exponent_epsilon: 0.5
+  # w_g = 1 unless a principled pre-specified weighting existed; it did not.
+  geometry_weighting: uniform
+
+# ---------------------------------------------------------------------
+gate07:
+  lambda_ir: 1.0e-2
+  lambda_uv: 1.0e+2
+  taper: 0.15
+  fermion_cutoff: 9
+  boson_mode_cutoff: 8
+  algebra_level: 1
+  r_alg: 5
+  r0: 1.0
+  rho: 2.0
+  n_features: [1000, 3000, 10000, 30000, 100000, 300000, 1000000]
+  seeds: [ns_s01, ns_s02, ns_s03, ns_s04, ns_s05, ns_s06, ns_s07, ns_s08]
+  # Explicit randomized Cauchy factorization: an NS architecture whose width
+  # and randomness are its own, not the boson's.
+  cauchy:
+    # Geometric proposal P(n) = (1-q) q^n over NS modes. The pointwise kernel
+    # estimator has finite variance iff q > (r_in/r_out)^2 = 1/rho^2 = 0.25;
+    # q = 0.75 sits well above that. n_max is numerical truncation only
+    # (the discarded tail q^(n_max+1) ~ 1e-50).
+    q: 0.75
+    n_max: 400
+    quadrature_points: 64
+    # The torus-quadrature path is an independent EVALUATION check of the same
+    # object, not a statistical one, so it runs only up to this width: its cost
+    # is O(q^2 N) and it would dominate the gate at N = 1e6 while telling us
+    # nothing the smaller widths have not already established.
+    quadrature_max_width: 10000
+    # widths at which the pointwise unbiasedness / variance diagnostics run
+    kernel_probe_widths: [1000, 10000, 100000]
+    kernel_probe_repeats: 200
+    # proposals used to demonstrate the variance condition is real, not formal
+    variance_scan_q: [0.10, 0.20, 0.30, 0.50, 0.75, 0.90]
+    # truncations at which the EXACT estimator variance is evaluated; below the
+    # threshold it must grow without bound in n_max, above it must be flat
+    variance_scan_n_max: [50, 100, 200, 400]
+  architectures: [selected_log_kernel, rbf_gaussian_prior, angular_mode_scramble]
+
+# ---------------------------------------------------------------------
+gate08:
+  # Intrinsic stationarity audit. Runs on the SAME grid as gate01 so the new
+  # axis is directly comparable with the existing synthesis columns.
+  translation_invariance:
+    lambda_ir: 1.0e-2
+    lambda_uv: 1.0e+2
+    taper: 0.15
+    reference_regulator_class: tapered_log_window
+    n_features: [10000, 30000, 100000, 300000, 1000000]
+    seeds: [controls_s01, controls_s02, controls_s03, controls_s04]
+    n_separations: 6
+    n_shifts: 16
+    max_separation: 0.7
+    shift_radius: 0.8
+    # a defect below this at the largest width counts as "zero up to numerics"
+    numerical_zero: 1.0e-10
+    # isotropy is only statistical: an isotropic prior gives a defect of order
+    # N^-1/2, so its verdict is "converging", not "vanishing".
+    n_angles: 12
+  # Each control is designed to violate ONE structural property. The synthesis
+  # requires it to fail THAT axis; it is not required to fail every axis.
+  designed_violation:
+    selected_log_kernel: none
+    rbf_gaussian_prior: radial_spectrum
+    local_exponent_direction: radial_exponent_positivity
+    angular_mode_scramble: rotational_invariance
+    anisotropic_angular_prior: rotational_invariance
+    phase_correlated_features: translation_invariance
+    sign_breaking_mode_reassignment: symplectic_sign_structure
+    non_symplectic_dense_mixing: symplectic_structure
+  axis_for_violation:
+    radial_spectrum: pairing_fidelity
+    radial_exponent_positivity: physical_admissibility
+    # measured directly by the isotropy defect, not via the Ward proxy
+    rotational_invariance: rotational_invariance
+    translation_invariance: translation_invariance
+    symplectic_sign_structure: physical_admissibility
+    symplectic_structure: physical_admissibility
+  # thresholds, pre-specified
+  thresholds:
+    lambda_min_positive: 0.0
+    ward_converging_exponent: -0.25     # steeper than this counts as converging
+    delta_iso_converging_exponent: -0.25
+    translation_defect_zero: 1.0e-08
+    # isotropy: converging counts as passing; pinned counts as failing
+    rotation_converging_exponent: -0.25
+  frozen_convergence_rows: results/jhep_frozen/predarboux_convergence_seed_rows.csv
+  null_width_exponent: -0.5
+  n_boot: 10000

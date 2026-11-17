@@ -1,0 +1,416 @@
+{
+  "release_version": "1.0.0",
+  "preparation_date": "2026-11-07",
+  "publication_date": null,
+  "doi": null,
+  "source_generation_commit": "2900ae4aa10ff33ecf88a527e9cf633f0185f98c",
+  "original_artifact_packaging_commit": "2238dc35103a746d616d0a49f22c988611c1ebeb",
+  "original_config_hash": "f51ad38719b59543",
+  "publication_status": "PREPARED_NOT_PUBLISHED_AUTHOR_APPROVAL_PENDING",
+  "code_export": "Byte-identical selected files from the generation commit; no Git history exported.",
+  "original_manifest_artifacts": 377,
+  "original_manifest_preserved": true,
+  "baseline_artifact_count": 80,
+  "supplemental_review": "November corrections are separate from unchanged September evidence.",
+  "proposed_licenses": {
+    "code": "MIT",
+    "data_figures_documentation": "CC-BY-4.0"
+  },
+  "license_approval_status": "PENDING_AUTHOR_APPROVAL",
+  "creator": {
+    "name": "Brandon Robinson",
+    "affiliation": "Institute of Physics, University of Amsterdam"
+  },
+  "source_files": [
+    {
+      "path": "Draft-JHEP-Frozen.tex",
+      "git_blob": "d3d339e7df79fcaf1de4cb2e4f2ee209435604a0",
+      "sha256": "345f58a545abe96066749ccca69c9103ac1a5d687f9fd52794b69c5a2da68bf0"
+    },
+    {
+      "path": "Virasoro_JHEP_Frozen.bib",
+      "git_blob": "7988a0b5ce0b7b152b96cb49a4eea14a73bdadb6",
+      "sha256": "651f01aadb80d53ce4c5e9d0e0a9c6022f72fcab59e6d7b7f006bdf81492c141"
+    },
+    {
+      "path": "configs/jhep_frozen.yaml",
+      "git_blob": "235a81ab9e012f443b01e083e214d681d09b4f93",
+      "sha256": "126216ff3b783ef8e0fede09361abb0c6773984fe8acf81b6223912f250016ed"
+    },
+    {
+      "path": "configs/jhep_submission_hardening.yaml",
+      "git_blob": "8cdf174402e225cf7823a9d89f051cfde55ae4b9",
+      "sha256": "7a92d4040ea36d40c115f0a7bf7f2d535ea51a5449c26759703362f730ee2672"
+    },
+    {
+      "path": "docs/hardening/GATE_MATRIX.md",
+      "git_blob": "37bcce8b5b63e7a2057e9873402d0e6d0c645046",
+      "sha256": "551fc32e4c6def4dcff93057fb353f24be90c51435f082e5b305c97b1b1b55c2"
+    },
+    {
+      "path": "docs/hardening/IMPLEMENTATION_MAP.md",
+      "git_blob": "d01ae846a7f031550315515822d6f9d51d1f7805",
+      "sha256": "64c1394b7fcda9930ab842ab54adc37deb8da2ccfbbd9103b74ace295b2aaca8"
+    },
+    {
+      "path": "docs/hardening/NS_IMPLEMENTATION_MAP.md",
+      "git_blob": "68344c5fc907e89758bea6e44f50f02549c3aa4e",
+      "sha256": "4a015a15a1ff03e6e8ed8280800f4e0643fbd18b109ddac5c68228820ec7ec92"
+    },
+    {
+      "path": "docs/hardening/gate01_intrinsic_admissibility_summary.md",
+      "git_blob": "bbc8685dc264f6d9092990dc101d36139cd9dd85",
+      "sha256": "2eb6b74a777815e8c4c3f9b532d3b25f2f1b57cd507df267aeabf8d5f0394805"
+    },
+    {
+      "path": "docs/hardening/gate02_predarboux_virasoro_summary.md",
+      "git_blob": "93c77fee157c85de6847364f371d3e4595149a44",
+      "sha256": "2e0ac3b9db3207ca3e5b4835b49d885715f541906f82e84c7d612ba9d8b2bd71"
+    },
+    {
+      "path": "docs/hardening/gate03_tt_summary.md",
+      "git_blob": "c07b0cec6d3c026d12fe35658444a840d6d350b1",
+      "sha256": "f18ad87fb22d0b69086d0bea6a2871770b9f90569253ddb812a29e74f07d5d82"
+    },
+    {
+      "path": "docs/hardening/gate04_ward_summary.md",
+      "git_blob": "2433a9fe15d91ebcb3577aa75a8a4b24ff45bd1e",
+      "sha256": "9a02d336b5d54c4fecf0fa4ab42b474436587398a8187a06479faceac204d15a"
+    },
+    {
+      "path": "docs/hardening/gate06_normalization_crosswalk.md",
+      "git_blob": "bf85010c8180f773087756b5de74fc54aee99297",
+      "sha256": "2bc11f4be309c7222cb80a88d66532542139c210d8db1f87a90f79a516dd61e2"
+    },
+    {
+      "path": "docs/hardening/gate07_ns_summary.md",
+      "git_blob": "fec6fa1bdbb888cc5e33629b74230e31f0d2bf42",
+      "sha256": "a2e28b52fddf5275bd3d65c264248e2d20c53ee4201e97785352b7a3e9357387"
+    },
+    {
+      "path": "docs/hardening/gate08_synthesis_summary.md",
+      "git_blob": "4de1a8d07253d324e28805533992999983b99bcb",
+      "sha256": "8988616f393d62697fab22c4ebad1646b33377e61708e0b7925d485e8ef2316a"
+    },
+    {
+      "path": "scripts/build_hardening_ledger.py",
+      "git_blob": "46e9d9e77900ab0112de1765532738a441ad9bec",
+      "sha256": "9dabff570331858cd0a47cac777a616037e346585bcfcf2edf849ef4cedc77a4"
+    },
+    {
+      "path": "scripts/check_jhep_claim_gates.py",
+      "git_blob": "3006b46a4e8b5bc56e67a2686cc85daabff8669f",
+      "sha256": "701177bb5f806363d78ecb59e257f209a26cfd9c77cf1efa1696ad724e11d1b7"
+    },
+    {
+      "path": "scripts/check_release_integrity.py",
+      "git_blob": "607cdd5552e88f32e170076b2b1b76c60d74b4c4",
+      "sha256": "9fa597365f7709e39b1d666c93c9dfa833688a9380cb3d8405c3e3680f17a960"
+    },
+    {
+      "path": "scripts/daemonize.py",
+      "git_blob": "53c50d27e39c6a7e9ffa5986d2d41e30e2f456d5",
+      "sha256": "b1a83c2f41166cf646ba971d8b280aa73f4d6ec34f93f3ee79855d2b9bd67cdd"
+    },
+    {
+      "path": "scripts/finalize_release.py",
+      "git_blob": "1dadb580b1a91b0c7e963d153d3315d56a2471d0",
+      "sha256": "53f2ee3eddb3acff03c66873c7826318e4bab228a5acf42f5caac9beb13b7163"
+    },
+    {
+      "path": "scripts/make_figures.py",
+      "git_blob": "754975a00e1123da38c960b87763fe971a0effd2",
+      "sha256": "0ff04ed9753aa9521b8464f2037e321ec544b48b709dcd192ddf50e9cb29d353"
+    },
+    {
+      "path": "scripts/make_frozen_manuscript.py",
+      "git_blob": "a758f3fb7aab9f6ce0249d8611cd0b7cc1fdf4b5",
+      "sha256": "44d7d1448491c09d3c0c3e12dc00a1f092a7af2424efd1dab88a43678f43be3a"
+    },
+    {
+      "path": "scripts/make_progress_reports.py",
+      "git_blob": "dc4afa66d98a2a141ed54e3b31158c3ebdf4f3e4",
+      "sha256": "363bc6645b9fe04b6eace1f9ae5f30b8ce3c8dcba1f31a2b0e21decec1bb115a"
+    },
+    {
+      "path": "scripts/make_submission_bundle.py",
+      "git_blob": "fb7c882f009d0e5de8e0764d6873755b7fb9419d",
+      "sha256": "36b0dc53a08edcf4f22093ed91f5717512664caa884a618b56f471bb15e5c08a"
+    },
+    {
+      "path": "scripts/run_central_offset.py",
+      "git_blob": "aa81a3eabb36d1d710d8fd314d2e5fb97b9c3102",
+      "sha256": "f5bd3545c28ed4368c9a7083affc411fed3692de941fd236cad84421ff6fef2d"
+    },
+    {
+      "path": "scripts/run_current_kernel_reference.py",
+      "git_blob": "831b967d9251f6e287d7aa30a61190a8270f4536",
+      "sha256": "eff7532fabfeaf19cfc8ebe7c18488f1ba3367185f9f83cf8c710699b60927f4"
+    },
+    {
+      "path": "scripts/run_edge_remainder.py",
+      "git_blob": "326592cdf6b287910dfbc6fe01decdaf3d2f5947",
+      "sha256": "24e5668c0422575998ed60cd4922c6c22394ed26bc53628f02e45d06bc51d966"
+    },
+    {
+      "path": "scripts/run_gate01_intrinsic.py",
+      "git_blob": "eb1d6db34724a92fa6a1773cb772fb64cb4c156c",
+      "sha256": "0a01ac8e4d41f183423033ce72fac86ff1eb0ee639fd463aafcf0afc0d5dde5d"
+    },
+    {
+      "path": "scripts/run_gate02_pbw.py",
+      "git_blob": "f7398f3fd8bc2610800ca8e35f9adda212653412",
+      "sha256": "322569e427abed6ed32338cf86772f3125b47f2805cbcf74bce10b393361ba23"
+    },
+    {
+      "path": "scripts/run_gate03_direct_extension.py",
+      "git_blob": "5d5a50704884644b12c55092f124634905954ccb",
+      "sha256": "3d8cd718b57e4fb794923cb4e1d62c2b18001089dee3a28454a2a1995d495c2a"
+    },
+    {
+      "path": "scripts/run_gate03_qratio.py",
+      "git_blob": "0f2f6e4c4c49fa908cc2ef2fa03785a8093349bf",
+      "sha256": "16ab9a3df8871fa5a8e4416157d0c9017cc1dab9952fc03f9fe1aa7078ff7caf"
+    },
+    {
+      "path": "scripts/run_gate03_tt.py",
+      "git_blob": "04efa2076f7e50cf0b16b9153c6c721b99da65ce",
+      "sha256": "b6d10ef7ad24068a3ca253b00594dd43ef96b9cd4fda8b901bdc834866106ce3"
+    },
+    {
+      "path": "scripts/run_gate04_ward.py",
+      "git_blob": "99807a304c374afe902d80e7ceb3b843f0ec5b18",
+      "sha256": "305237e2ee29de905513c802bda04ecc87354c91a03dc220a7b31dedaacc856f"
+    },
+    {
+      "path": "scripts/run_gate06_normalization.py",
+      "git_blob": "1b3a0c9e0bb04a67601df5d789e8aef55b5ed711",
+      "sha256": "2c8401f8c8de010902b499aa855276a69edefc454ad39f55961080550d1b574d"
+    },
+    {
+      "path": "scripts/run_gate07_ns.py",
+      "git_blob": "abe57619651ac4ce5b477091ef605cbc3566fa07",
+      "sha256": "9be7135ee6e77829568ded0f67263768a8f9c814886e7f9fb388af4ab198b2be"
+    },
+    {
+      "path": "scripts/run_gate08_synthesis.py",
+      "git_blob": "189711980521112ebe9a36af0a07880f23eff08d",
+      "sha256": "cdea00d1e1e0c2156be4375be9769277fa4c46667dc83d23c94c2b60991ebe51"
+    },
+    {
+      "path": "scripts/run_jhep_frozen_suite.py",
+      "git_blob": "9097b284893f1b103b14041fca00fe2f00b74bfa",
+      "sha256": "46da433b285adbb9e2a4d14182ca1555696c40b386488752f93e4bd48f5ae2dd"
+    },
+    {
+      "path": "scripts/run_jhep_submission_hardening.py",
+      "git_blob": "9c557c3d786e2fdb998929388c736d03c6328d28",
+      "sha256": "aaea8c4c96dd64981adf9af17a0c87b59595dd3f3e0477a289d6f4e93441bd76"
+    },
+    {
+      "path": "scripts/run_ns_audit.py",
+      "git_blob": "9cb725edecd84dff5f139a9368ade2007910095b",
+      "sha256": "d2a8b4f104a2427ef71db5790271e426cd1cc05757c6f11665023f42a951439e"
+    },
+    {
+      "path": "scripts/run_ordered_pairing_audit.py",
+      "git_blob": "8b44be13d98d7008791f01bb72ae81963614e39b",
+      "sha256": "b3bac9f2ed7294f62a63f90bc0ff53bec89a1913721ed03261d3c876b315535e"
+    },
+    {
+      "path": "scripts/run_sampled_tt.py",
+      "git_blob": "b98e57f1e65894c61c61896081625042df8c1eec",
+      "sha256": "a80bbad7bb903e9d0c1e912f6ec30d17573b81fc82254865f941d9c3a003b32c"
+    },
+    {
+      "path": "scripts/run_vertex_and_cumulant.py",
+      "git_blob": "76d99e8b54fe90610612832df98838dc0d247d7d",
+      "sha256": "8a065ef54e839f90533936ede5436ce77611abf0b9d90267bd3ea8ce27a41bcb"
+    },
+    {
+      "path": "scripts/run_ward_audit.py",
+      "git_blob": "3955f70da40fcfe3e76c65bcf71cfb59c2320d5b",
+      "sha256": "fbc120cc24ff6a4ce8098c443ad7af37d84d8901e39b12e98433270968b04aa9"
+    },
+    {
+      "path": "src/nnft_virasoro/__init__.py",
+      "git_blob": "6d7965ee4631142f7d57edd7d880300a293aff02",
+      "sha256": "89a24ef94b430cdf8b4c9707f4a4c65ac710b628c53150e372d072b0cd98d93f"
+    },
+    {
+      "path": "src/nnft_virasoro/algebra.py",
+      "git_blob": "131e51c7b259783acf8c4a99a548a03ed88fcffd",
+      "sha256": "c4b1805c1997ca05bc837fcb2ac7173d64300cbd4e15d977148c138eac2b9a2e"
+    },
+    {
+      "path": "src/nnft_virasoro/architectures.py",
+      "git_blob": "6809489e5145b70a7988fa3b432df76aad3cea9e",
+      "sha256": "864a9d71c70f1fbebe0b247598275fedcc72571846b0bf4de990a4ed3e0b8c04"
+    },
+    {
+      "path": "src/nnft_virasoro/cli.py",
+      "git_blob": "b1c82f4939b8d2ff6f95de94d028c6845115d566",
+      "sha256": "4027ecb7f1cf2ec6a00c77969689a09c37b4dc2f52118c4f53c155c3eea2dc55"
+    },
+    {
+      "path": "src/nnft_virasoro/config.py",
+      "git_blob": "556941416a7edb90b6bbd747f04d30a044f39fa6",
+      "sha256": "2da67f12d7e6dc421e06c87efa216bf1926b8d4f321a101fb567f9ed68f67ad7"
+    },
+    {
+      "path": "src/nnft_virasoro/darboux.py",
+      "git_blob": "4ee20e81602c24c65ab868f7ed376130776bb891",
+      "sha256": "4e37cc06d83171e603c74e06296eee7a07661d00dfc249461f51e977578c5721"
+    },
+    {
+      "path": "src/nnft_virasoro/fits.py",
+      "git_blob": "27b951e91b3cd8583c2bafcd913bc0c6cd1fe4ae",
+      "sha256": "c9ffde4e2c592302b886464da5466f4b2f5260cd15f5edde2c8673bcc4635cba"
+    },
+    {
+      "path": "src/nnft_virasoro/intrinsic_admissibility.py",
+      "git_blob": "6078e61133362154e4c9c2d3c3b0b88311c52544",
+      "sha256": "d8cab132679963d4c654c89110a3889dec7a378247654565c2ac8d12d517d20b"
+    },
+    {
+      "path": "src/nnft_virasoro/io_utils.py",
+      "git_blob": "8a3f8f728af880a98992ee413a45c1f391cef791",
+      "sha256": "7f148b29ab783711b3c0bc2f72e0b73c8f1cacd1b33e4e68eb0487887d236a03"
+    },
+    {
+      "path": "src/nnft_virasoro/kernels.py",
+      "git_blob": "43b7e585cf1668b3687447451cb2290f0b25d2a7",
+      "sha256": "b8eb413e94cfd4b3ea5792616c249fa0af033cd652af723f00198577eee31183"
+    },
+    {
+      "path": "src/nnft_virasoro/ledger.py",
+      "git_blob": "029e204a9deb3525f8b4469f51a8ad19b2e340b9",
+      "sha256": "f6f8419732b0b4e5ac6f4064834a515d758a1562aa654c7aeeb790e9400634ac"
+    },
+    {
+      "path": "src/nnft_virasoro/nonholomorphy.py",
+      "git_blob": "ea48d98d5d1969cd97e25fa3c4ce5ffcd510fdc6",
+      "sha256": "d142b8792b99cb14e5c7b1afe98891a77ff4a0515423c58d727ed33161d4bfff"
+    },
+    {
+      "path": "src/nnft_virasoro/ns_cauchy.py",
+      "git_blob": "33e7be9fcb36f66c85444fa4f8e49c3439329b46",
+      "sha256": "df2d41a7c2865766dcf2b1dc3f41fd57478cd18603c819b471289789a52a839c"
+    },
+    {
+      "path": "src/nnft_virasoro/ns_fermion.py",
+      "git_blob": "a0be4b9b822dd3e01ce360f26625b25bc8fd9962",
+      "sha256": "b356c442483d48a8a003931ba1ec6095c6fc001086e6c54b49e99c508d8353ef"
+    },
+    {
+      "path": "src/nnft_virasoro/ordered_pairing.py",
+      "git_blob": "a37081517442402c79c1da8533192d9416b0eccd",
+      "sha256": "0384c1114da401f6aedd09c693e62bd24f56ea00cf7dc3cb0a1e09de16d6d205"
+    },
+    {
+      "path": "src/nnft_virasoro/pbw_residual.py",
+      "git_blob": "05462b0a8fc6b2e767b1d6f5ad12051913b1fa8b",
+      "sha256": "1afff5bdb10327fca2e4cd6bcaefa0d44f36a7b2c2bbb3b9dcec68582be0afd7"
+    },
+    {
+      "path": "src/nnft_virasoro/plotstyle.py",
+      "git_blob": "d75e1957fc52465c7d0b02a950146171bb023fbd",
+      "sha256": "b220b220e184e2b4efacfe45da2c0512bee952a82d484a3f4b2ee1190c00ac91"
+    },
+    {
+      "path": "src/nnft_virasoro/provenance.py",
+      "git_blob": "4bef352d77ea1cacefeb32b967be13a27ce4c62e",
+      "sha256": "260a972b9b0082a7101c706e708800f923b4c7d2d01e6b84373319be63461bc7"
+    },
+    {
+      "path": "src/nnft_virasoro/sampling.py",
+      "git_blob": "7b6fc7e19fdb61dca522e1dc0f99f9e179bb5d41",
+      "sha256": "6f06c1e233582ce56531f7988c8ea2abb7bc9ce3bccb5d55bbfb2c715182902c"
+    },
+    {
+      "path": "src/nnft_virasoro/stress_tensor.py",
+      "git_blob": "193101a2605c4369eceda032d6bcbb086f8bf747",
+      "sha256": "da17d4c02d02e9bed65b60ebf32347cae4d572a03bf792fd2e3ee3871c5a2852"
+    },
+    {
+      "path": "src/nnft_virasoro/superalgebra.py",
+      "git_blob": "31ffbcaca4e6a1537e69255748cead42665b532f",
+      "sha256": "1fd4801e8c80a825bc4c7deee6aa35ce869dd7342df55960336cf9614a517e79"
+    },
+    {
+      "path": "src/nnft_virasoro/translation_invariance.py",
+      "git_blob": "fb6ab15ec385995c45f87b6057bd1d4681710ca5",
+      "sha256": "627cb4030012136b8bb7c634ab9605ba4a10a12594bbd243573a50547ec6e2ec"
+    },
+    {
+      "path": "src/nnft_virasoro/vertex.py",
+      "git_blob": "942cc1b6f9a9cd3507c93ddbe9f3e80d896d08d3",
+      "sha256": "5caa466596de26b85a396a2041d68ed02758a9782110ce4d6e3ecd561d28d953"
+    },
+    {
+      "path": "src/nnft_virasoro/ward.py",
+      "git_blob": "b0e5ef5c8319e76d2a38e3b0cab4be5fe95a7f20",
+      "sha256": "57134c7fddc20a75146f712897e642297806d22bacb53fc43f91d30e21ad2f56"
+    },
+    {
+      "path": "tests/conftest.py",
+      "git_blob": "ec10aa42c4a8de65037bd0c2706e7ca02ae397d2",
+      "sha256": "ed02c52885fb5f7f8352376ff56d7e5c6470c46c2f0e8d8f6af4fef3022f8848"
+    },
+    {
+      "path": "tests/test_algebra.py",
+      "git_blob": "a5d12dbc096c59fc31d942f5b6580dd4b19072f2",
+      "sha256": "1fb636fe97e288c6f2be9a7ea5b2c18dedc563e71beb60a0e0a43084832fbe47"
+    },
+    {
+      "path": "tests/test_gate01_intrinsic.py",
+      "git_blob": "98a85e3a75ae4f1e499eba54849325486647b027",
+      "sha256": "a19a1c89d5c251c86d514a6e1758abb3f6be10908539633ce2cbb55cc2a14f66"
+    },
+    {
+      "path": "tests/test_gate02_pbw.py",
+      "git_blob": "85a248ca768a3ea625d6ba0be5e90b98c9e21a16",
+      "sha256": "7999cea6420056030ad5df9f3296445845260a6f447cca7ee753a9664426b2af"
+    },
+    {
+      "path": "tests/test_gate03_tt.py",
+      "git_blob": "ac08fb73ca3e0860f9b584fe60e8f64dfdd069d8",
+      "sha256": "8d50519d90e9331fb722b93d5c41fe4b8a808b7fc430618f396db9b4218e8896"
+    },
+    {
+      "path": "tests/test_gate04_ward.py",
+      "git_blob": "322d609396191c373bda4e1e13f1b8d72bacfeaa",
+      "sha256": "5eb347fd25280b18c1263e8977f6efdfbd02951ef4b4a80a729fecf3a6d62d33"
+    },
+    {
+      "path": "tests/test_gate06_normalization.py",
+      "git_blob": "93db77cd755f33f190ed32489c0b5f5884952c17",
+      "sha256": "c6bcc98432803b3ab4c46a6fc74eca4dfd5089f37dcc8292cb30c4086559af46"
+    },
+    {
+      "path": "tests/test_gate07_ns.py",
+      "git_blob": "2a4b6bc030b1fb662e0b4a391d844a4f85d3832d",
+      "sha256": "ef1e83f0f5ccbc913fc76922892157ac5677027cad3e59bdb51a5d71198ca66e"
+    },
+    {
+      "path": "tests/test_gate08_synthesis.py",
+      "git_blob": "f2029767d696893f7378cb6b416dd3ab1e22449a",
+      "sha256": "ced7691a65350f67ac3fd55f619cb4e3325304d5ca142ab8211dcef624e85cc8"
+    },
+    {
+      "path": "tests/test_kernels.py",
+      "git_blob": "30975e044060267abecedb49ba9391bba6468c13",
+      "sha256": "64090e74aa7b388a5499c2b032efa332f2e0e163aa91b27a61f6f7d8e7bea8ad"
+    },
+    {
+      "path": "tests/test_ordered_pairing.py",
+      "git_blob": "60ef4a67e7acd8e9967204e7a619ac3c7321d7dc",
+      "sha256": "4ff016dec15b8eec435f23de05c11f49c6ce2156a351f4c0f64fbfa9eba3b05b"
+    },
+    {
+      "path": "tests/test_release.py",
+      "git_blob": "9e238859efd845517b9f567fb322350779e29cdb",
+      "sha256": "1cf9413f4dbc8c7faa3be620f7c862878edf8e47047ea1a48d46bc3cf47b51ae"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "ghost_wick_derivations": {
+    "bc": {
+      "central_charge": "-2*(6*lambda**2 - 6*lambda + 1)",
+      "ward": {
+        "F": {
+          "weight": "lambda",
+          "derivative_pole": "1"
+        },
+        "G": {
+          "weight": "1 - lambda",
+          "derivative_pole": "1"
+        }
+      },
+      "at_critical_weight": "-26"
+    },
+    "beta_gamma": {
+      "central_charge": "2*(6*lambda**2 - 6*lambda + 1)",
+      "ward": {
+        "F": {
+          "weight": "lambda",
+          "derivative_pole": "1"
+        },
+        "G": {
+          "weight": "1 - lambda",
+          "derivative_pole": "1"
+        }
+      },
+      "at_critical_weight": "11"
+    }
+  },
+  "majorana_stress_central_charge": "1/2",
+  "dirac_current_level": 1,
+  "native_majorana_feature_contraction": "exact symbolic identity",
+  "ramond_kernel": "exact geometric-series identity",
+  "ramond_pole_residue": "1",
+  "ramond_stress_expectation": "1/(16*z**2)",
+  "ramond_ground_weight": "1/16",
+  "multiplicative_old_NS_twist_pole_residue": "1/z",
+  "ramond_finite_mode_CAR_max_error": 6.280369834735101e-16,
+  "ramond_parity_max_error": 0.0,
+  "angular_quadrature_comparisons": 24,
+  "angular_max_abs_error": 2.907926436840383e-16,
+  "scope": "Symbolic local formulas and finite-mode consistency; no new Monte Carlo, full bosonization, BRST, or modular-consistency claims."
+}

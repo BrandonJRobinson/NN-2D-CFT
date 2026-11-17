@@ -1,0 +1,8 @@
+# Recorded September production environment: CPython 3.11.11.
+numpy==1.25.2
+scipy==1.11.4
+pandas==2.1.4
+matplotlib==3.8.0
+PyYAML==6.0.1
+# pytest was not version-recorded in the production environment record.
+pytest>=7

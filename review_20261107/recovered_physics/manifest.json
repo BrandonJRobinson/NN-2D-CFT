@@ -1,0 +1,37 @@
+{
+  "title": "Recovered local physics: consistency checks",
+  "version": "2026-11-07-review-candidate",
+  "publication_status": "not deposited",
+  "license_status": "author approval pending",
+  "python": "3.13.2",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "sympy": "1.14.0",
+  "files": [
+    {
+      "path": "README.txt",
+      "bytes": 1436,
+      "sha256": "2ca3169dcf4c0f9b5fc12f1da5af27e42638b9c81f3d7007fb17997b674ae96e"
+    },
+    {
+      "path": "audit/recovered_physics_checks.json",
+      "bytes": 1363,
+      "sha256": "f32831b761c9f34469d3a905004fd524c9a4f0e1c9b8e37d88586e703468c583"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 69,
+      "sha256": "13cc02363264d153b3776bc56a331aa18e87cdbaa227d350660117cfa0d36b38"
+    },
+    {
+      "path": "scripts/check_recovered_physics.py",
+      "bytes": 5782,
+      "sha256": "72fedee7a5033b09a8a35fd32eabaa0de131c8c673e5b52ffa7867444a7e6d62"
+    },
+    {
+      "path": "verify_files.py",
+      "bytes": 497,
+      "sha256": "8de4c110ca90f35e669b6b4d935c171c5badb52dc078a19898e0d8e49e09564f"
+    }
+  ]
+}

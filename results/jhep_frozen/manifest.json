@@ -1,0 +1,354 @@
+{
+  "suite": "jhep_virasoro_frozen",
+  "suite_version": 1,
+  "generated_utc": "2026-08-01T09:13:15Z",
+  "git_commit": "b3fd73dd887b92de783ee8d825075d66641c1436",
+  "git_dirty_code": false,
+  "config": "configs/jhep_frozen.yaml",
+  "config_hash": "278e438b94465564",
+  "estimator_classes": [
+    "analytic_closed_kernel",
+    "deterministic_finite_feature",
+    "sampled_finite_network",
+    "exact_symbolic"
+  ],
+  "regulator_classes": {
+    "sharp_annulus_manuscript": 0.0,
+    "tapered_log_window": 0.15
+  },
+  "named_seeds": {
+    "pairing_grid": 20260101,
+    "radius_plateau": 20260102,
+    "robustness_recompute": 20260103,
+    "convergence_s01": 20260201,
+    "convergence_s02": 20260202,
+    "convergence_s03": 20260203,
+    "convergence_s04": 20260204,
+    "convergence_s05": 20260205,
+    "convergence_s06": 20260206,
+    "convergence_s07": 20260207,
+    "convergence_s08": 20260208,
+    "convergence_s09": 20260209,
+    "convergence_s10": 20260210,
+    "controls_s01": 20260301,
+    "controls_s02": 20260302,
+    "controls_s03": 20260303,
+    "controls_s04": 20260304,
+    "controls_s05": 20260305,
+    "controls_s06": 20260306,
+    "tt_s01": 20260401,
+    "tt_s02": 20260402,
+    "tt_s03": 20260403,
+    "tt_s04": 20260404,
+    "tt_s05": 20260405,
+    "tt_s06": 20260406,
+    "tt_s07": 20260407,
+    "tt_s08": 20260408,
+    "tt_s09": 20260409,
+    "tt_s10": 20260410,
+    "tt_s11": 20260411,
+    "tt_s12": 20260412,
+    "ward_s01": 20260501,
+    "ward_s02": 20260502,
+    "ward_s03": 20260503,
+    "ward_s04": 20260504,
+    "ward_s05": 20260505,
+    "ward_s06": 20260506,
+    "ward_s07": 20260507,
+    "ward_s08": 20260508,
+    "ns_s01": 20260601,
+    "ns_s02": 20260602,
+    "ns_s03": 20260603,
+    "ns_s04": 20260604,
+    "ns_s05": 20260605,
+    "ns_s06": 20260606,
+    "ns_s07": 20260607,
+    "ns_s08": 20260608,
+    "central_offset": 20260701,
+    "current_reference": 20260801,
+    "vertex_s01": 20260901,
+    "vertex_s02": 20260902,
+    "vertex_s03": 20260903,
+    "vertex_s04": 20260904,
+    "vertex_s05": 20260905,
+    "vertex_s06": 20260906,
+    "cumulant_s01": 20261001,
+    "cumulant_s02": 20261002,
+    "cumulant_s03": 20261003,
+    "cumulant_s04": 20261004,
+    "cumulant_s05": 20261005,
+    "cumulant_s06": 20261006,
+    "cumulant_s07": 20261007,
+    "cumulant_s08": 20261008
+  },
+  "stages": [
+    "WP-A",
+    "WP-B",
+    "WP-C",
+    "WP-D",
+    "WP-E",
+    "WP-F",
+    "WP-G",
+    "WP-H"
+  ],
+  "n_ledger_rows": 235,
+  "artifacts": [
+    {
+      "path": "figures_jhep_frozen/architecture_controls_postdarboux.pdf",
+      "bytes": 21797,
+      "sha256": "ac32a7a5f4e102693a5458dd12444ad8ccff9e4abd3b477e0b88d0cc5c7a57b0"
+    },
+    {
+      "path": "figures_jhep_frozen/architecture_controls_predarboux.pdf",
+      "bytes": 20368,
+      "sha256": "f1b469a9d1f911353968686dab37a29cf0f5e5c42dd697f02bdb12db696a472d"
+    },
+    {
+      "path": "figures_jhep_frozen/architecture_controls_ward.pdf",
+      "bytes": 18699,
+      "sha256": "7923988935c3f20731fd2e56ba52b660a7c3d07553498fa019a0259297c7ac4d"
+    },
+    {
+      "path": "figures_jhep_frozen/darboux_admissibility_vs_width.pdf",
+      "bytes": 47756,
+      "sha256": "7841e81a12704dfc3caf01492ff757ca7e5abae7b5d870ca272de1d54c88f5cc"
+    },
+    {
+      "path": "figures_jhep_frozen/finite_width_cumulant.pdf",
+      "bytes": 25813,
+      "sha256": "6b6af74f6c00e6b34d333b47712fe3755a8f0274219d68fbd7a546e046034c43"
+    },
+    {
+      "path": "figures_jhep_frozen/ns_pairing_convergence.pdf",
+      "bytes": 23068,
+      "sha256": "317b18afbdc7e40357dea80b4f8933ffadfb69d1a2ff7ae3f7e813c8e9655a11"
+    },
+    {
+      "path": "figures_jhep_frozen/ns_super_virasoro_residuals.pdf",
+      "bytes": 20511,
+      "sha256": "18a805afa2fb79cd9ccbd9f597ca83ad52264b7cd158431c357753676704c919"
+    },
+    {
+      "path": "figures_jhep_frozen/ordered_pairing_radius_plateau.pdf",
+      "bytes": 43290,
+      "sha256": "8c8d17d78038bb6bb1e99da2b477571acb4240256b33e12376676a9d0b405c7a"
+    },
+    {
+      "path": "figures_jhep_frozen/predarboux_pairing_vs_width.pdf",
+      "bytes": 33355,
+      "sha256": "bfdc5fa1afd70c217f8d15d87406416ac4d83dd7d5823fe194e84bda384c8935"
+    },
+    {
+      "path": "figures_jhep_frozen/predarboux_sampling_error_vs_width.pdf",
+      "bytes": 36110,
+      "sha256": "a8cbad17f8bccd7f997d510e21eea70038efee9f4f3fc96f9e4c65a5df07308d"
+    },
+    {
+      "path": "figures_jhep_frozen/raw_modewise_central_charge_offset_model.pdf",
+      "bytes": 24870,
+      "sha256": "7cb864502f3d82e0a2c9b92c0491d240f6676954601748bdf0e8f4358ebc85ca"
+    },
+    {
+      "path": "figures_jhep_frozen/raw_virasoro_vs_width.pdf",
+      "bytes": 37501,
+      "sha256": "ffb11dc14a3651ffaa074cb6db4e156c9c72b12a94415ed9f858063b788fd7b1"
+    },
+    {
+      "path": "figures_jhep_frozen/sampled_tt_central_charge.pdf",
+      "bytes": 22981,
+      "sha256": "aa18a16bdf132cbe5ec5cf91f34913209a9e63f9d9632e8078b34c5c2d58929e"
+    },
+    {
+      "path": "figures_jhep_frozen/sampled_vertex_weights.pdf",
+      "bytes": 20089,
+      "sha256": "97b268e58d05d5ad6531904097aa3f73dc175fce17d2dd46c4162cd7b68afb49"
+    },
+    {
+      "path": "figures_jhep_frozen/sampled_ward_convergence.pdf",
+      "bytes": 21895,
+      "sha256": "a4114dae337bcdebfc67e6654cc13f8a5885ff262d1feba363e9fa91e6390a6a"
+    },
+    {
+      "path": "figures_jhep_frozen/ward_controls.pdf",
+      "bytes": 12528,
+      "sha256": "76e7fd88928e9036990e565b9ff7bc23661136bb1569a70ddafd54bc155ca1f1"
+    },
+    {
+      "path": "results/jhep_frozen/all_metrics.csv",
+      "bytes": 9286617,
+      "sha256": "820831939ba777d0ea77b2d51dd4b965ef02571c6850aefc9d388edde6763864",
+      "rows": 9773
+    },
+    {
+      "path": "results/jhep_frozen/analytic_ward_points.csv",
+      "bytes": 7230,
+      "sha256": "fc19a0bb38b1a5ba50e3da96e7af85106cfcb981c9b6e64e0c04016efa8afe94",
+      "rows": 12
+    },
+    {
+      "path": "results/jhep_frozen/architecture_controls_seed_rows.csv",
+      "bytes": 315637,
+      "sha256": "3bc611161d8caf6686358f2f2ad2fba77706eb954665d53d8164aa5acfbbe924",
+      "rows": 320
+    },
+    {
+      "path": "results/jhep_frozen/central_offset_fit.json",
+      "bytes": 9377,
+      "sha256": "e014122c003d104ad760a4b94f9ae14dc66f69368877b1a11965e272d8e417fb"
+    },
+    {
+      "path": "results/jhep_frozen/central_offset_mode_extension.csv",
+      "bytes": 192102,
+      "sha256": "afd0f5c777b3aa124edc6b5ccb1d913e1598bed3b6c87e4561845abc0878900c",
+      "rows": 561
+    },
+    {
+      "path": "results/jhep_frozen/claim_ledger.csv",
+      "bytes": 160254,
+      "sha256": "ee4feb07533bf30688cf06931f2caa783fd1f65ed8859b52900a3e16ebd1def3",
+      "rows": 235
+    },
+    {
+      "path": "results/jhep_frozen/current_kernel_reference.csv",
+      "bytes": 46473,
+      "sha256": "edbea5b0b0579cb98b9ed0a776274b3dbc018b474a88c413e902817c1b07d883",
+      "rows": 78
+    },
+    {
+      "path": "results/jhep_frozen/darboux_admissibility_vs_width.csv",
+      "bytes": 12456,
+      "sha256": "2e377ade658cfc7eb53d8891033c6943244e6aebd262fb9924d3745b46830591",
+      "rows": 16
+    },
+    {
+      "path": "results/jhep_frozen/darboux_physical_admissibility.csv",
+      "bytes": 176756,
+      "sha256": "fbb788d66f6ec012af21a863d91829596f66607bc6697bba29e4dabe69005dc6",
+      "rows": 320
+    },
+    {
+      "path": "results/jhep_frozen/deterministic_feature_ward_points.csv",
+      "bytes": 1680817,
+      "sha256": "7303258461156b1d6743763df8004bbf50801a18ba52607a20ca173b62742f55",
+      "rows": 3072
+    },
+    {
+      "path": "results/jhep_frozen/edge_remainder_summary.csv",
+      "bytes": 9095,
+      "sha256": "4c60f95a182ad0fd6a30eacd56818ac55bd66392c3de9264cee37c4441e0c976",
+      "rows": 54
+    },
+    {
+      "path": "results/jhep_frozen/edge_remainders.json",
+      "bytes": 171397,
+      "sha256": "61e08c5e51e5480cde23d8311a5e319a4045f68a42adc67c3e5782e0d9439ee2"
+    },
+    {
+      "path": "results/jhep_frozen/finite_width_cumulant.csv",
+      "bytes": 6455,
+      "sha256": "db756408bbb32e46c36c6394cece36b6b7e95f286b9e9fe9b408db0c821e079f",
+      "rows": 10
+    },
+    {
+      "path": "results/jhep_frozen/finite_width_cumulant_seed_rows.csv",
+      "bytes": 40662,
+      "sha256": "e4e0ace3775cb5bde6d8d8d0e8a7c8a45c75a3a1f3829015126de73d2052104b",
+      "rows": 80
+    },
+    {
+      "path": "results/jhep_frozen/ns_frozen_metrics.csv",
+      "bytes": 17660,
+      "sha256": "8adae708c24293a0e9f1627b21ea3d245c7c7f8a379929c5f94d27a61d12d460",
+      "rows": 14
+    },
+    {
+      "path": "results/jhep_frozen/ns_pairing_seed_rows.csv",
+      "bytes": 31806,
+      "sha256": "c386fb9493eac838e38664b273b8f945b81e3de20002d707ec1938b85d8a822e",
+      "rows": 72
+    },
+    {
+      "path": "results/jhep_frozen/ns_sampled_correlators.csv",
+      "bytes": 10081,
+      "sha256": "74e598679634f21bd68626f01584f990145b31dfbcae724a4cc23fc42dfe96c6",
+      "rows": 36
+    },
+    {
+      "path": "results/jhep_frozen/ns_super_virasoro_seed_rows.csv",
+      "bytes": 27457,
+      "sha256": "eb423ba89bff3e49891923cd371a07968920b5e480734310e4dc0d0e43e6ada4",
+      "rows": 70
+    },
+    {
+      "path": "results/jhep_frozen/ordered_pairing_grid.csv",
+      "bytes": 426644,
+      "sha256": "f47dbce9d37ebbee31dfdaf6580a72fdc15e115b3147dbdfdcca53c8e691d9b5",
+      "rows": 640
+    },
+    {
+      "path": "results/jhep_frozen/ordered_pairing_radius_plateau.csv",
+      "bytes": 78314,
+      "sha256": "188f365348f5a9090cc664d6fe13481e00c912172e7feec9b70c4dab930fe016",
+      "rows": 144
+    },
+    {
+      "path": "results/jhep_frozen/predarboux_convergence_fits.csv",
+      "bytes": 5206,
+      "sha256": "6f04ec624c594bb3ffc607b77093e7dbd657badbe34ab3b215380d2fc84bb30f",
+      "rows": 8
+    },
+    {
+      "path": "results/jhep_frozen/predarboux_convergence_seed_rows.csv",
+      "bytes": 789825,
+      "sha256": "200bad449768c78c8e4f1fa306d8f5ff2d7a51f7b507f951c18e56dc32a4b4f0",
+      "rows": 1360
+    },
+    {
+      "path": "results/jhep_frozen/robustness_grid_recomputed.csv",
+      "bytes": 108462,
+      "sha256": "06585216e7f853b16dcea404021f61c41cca684d7cb367d6101155fe7e6af0ac",
+      "rows": 162
+    },
+    {
+      "path": "results/jhep_frozen/sampled_tt_central_charge.csv",
+      "bytes": 24732,
+      "sha256": "cb740eadbac2eb883062574d2c35472fc97f962b66e0c63a7d95ad9403054467",
+      "rows": 64
+    },
+    {
+      "path": "results/jhep_frozen/sampled_tt_seed_rows.csv",
+      "bytes": 196670,
+      "sha256": "84fca62130adce8d4c24a3bbc7772fa47c6c9c0cd445bdc05b5a53aa6d1b4e24",
+      "rows": 520
+    },
+    {
+      "path": "results/jhep_frozen/sampled_tt_summary.md",
+      "bytes": 2577,
+      "sha256": "388593ad3757d983c79e23c99f3d262035e0584249caa47f2755bc69ca9a895a"
+    },
+    {
+      "path": "results/jhep_frozen/sampled_vertex_weights.csv",
+      "bytes": 24879,
+      "sha256": "614a38e171ccc461963c7d29cfc8945601d589ce19bbc158015b5ac82a914f08",
+      "rows": 72
+    },
+    {
+      "path": "results/jhep_frozen/sampled_vertex_weights_seed_rows.csv",
+      "bytes": 153909,
+      "sha256": "2fe61f6f6a89263e47ffab917304ff0f073c060f0e5c9addf4cd7c93aaf079e0",
+      "rows": 432
+    },
+    {
+      "path": "results/jhep_frozen/sampled_ward_seed_rows.csv",
+      "bytes": 1066739,
+      "sha256": "f69b394d78ff1a00128229d10595cddcba3b1dbcee9930310168ddc051eb728a",
+      "rows": 1584
+    },
+    {
+      "path": "results/jhep_frozen/sampled_ward_summary.csv",
+      "bytes": 40792,
+      "sha256": "251da3165b900f4fef561097dc1d5eceeecf1a3dadca3de3cc3a3a4e183abfa5",
+      "rows": 72
+    }
+  ]
+}

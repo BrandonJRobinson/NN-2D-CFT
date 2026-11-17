@@ -1,0 +1,52 @@
+[
+  {
+    "n_features": 10000,
+    "samples": 4,
+    "raw_exact_admissible": 0,
+    "projected_positive": 3,
+    "normalized_positivity_certificate": 3,
+    "raw_error_mean": 0.5227047675707646,
+    "projected_error_mean": 0.494642272558809,
+    "projection_correction_mean": 0.15038459685553812
+  },
+  {
+    "n_features": 30000,
+    "samples": 4,
+    "raw_exact_admissible": 0,
+    "projected_positive": 4,
+    "normalized_positivity_certificate": 4,
+    "raw_error_mean": 0.4778983817444147,
+    "projected_error_mean": 0.47197204166140927,
+    "projection_correction_mean": 0.07231899892622759
+  },
+  {
+    "n_features": 100000,
+    "samples": 4,
+    "raw_exact_admissible": 0,
+    "projected_positive": 4,
+    "normalized_positivity_certificate": 4,
+    "raw_error_mean": 0.3120854712121109,
+    "projected_error_mean": 0.3093502269420273,
+    "projection_correction_mean": 0.038298508284222516
+  },
+  {
+    "n_features": 300000,
+    "samples": 4,
+    "raw_exact_admissible": 0,
+    "projected_positive": 4,
+    "normalized_positivity_certificate": 4,
+    "raw_error_mean": 0.14690541090442427,
+    "projected_error_mean": 0.144937727759387,
+    "projection_correction_mean": 0.020776601938598843
+  },
+  {
+    "n_features": 1000000,
+    "samples": 4,
+    "raw_exact_admissible": 0,
+    "projected_positive": 4,
+    "normalized_positivity_certificate": 4,
+    "raw_error_mean": 0.05876718407290431,
+    "projected_error_mean": 0.05800188724526192,
+    "projection_correction_mean": 0.008918175135871157
+  }
+]

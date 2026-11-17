@@ -1,0 +1,14 @@
+generated_utc: 2026-09-16T20:42:36Z
+python: 3.11.11 (CPython)
+platform: macOS-26.7-x86_64-i386-64bit
+machine: x86_64
+cpu_count: 14
+numpy: 1.25.2
+scipy: 1.11.4
+pandas: 2.1.4
+matplotlib: 3.8.0
+
+# Thread pinning used by the parallel stages (see
+# scripts/run_gate03_direct_extension.py): the numerics are unaffected,
+# verified bit-identical with and without pinning.
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1

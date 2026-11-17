@@ -1,0 +1,341 @@
+# =====================================================================
+# Frozen configuration for the JHEP Virasoro evidence campaign.
+# Every convention here is anchored to Draft-JHEP-Active-v6.tex; see
+# results/jhep_frozen/REPOSITORY_MAP.md section 3 for the mapping.
+# Changing this file changes config_hash and therefore invalidates
+# --skip-existing for downstream artifacts.
+# =====================================================================
+suite: jhep_virasoro_frozen
+version: 1
+
+global:
+  # Strict physical window, eq. (2.5): r_min = margin_uv/Lambda_UV,
+  # r_max = 1/(margin_ir*Lambda_IR).
+  window_margin_uv: 30.0
+  window_margin_ir: 30.0
+  # Reference radius ratio, eq. (3.9).
+  rho_reference: 2.0
+  # Angular quadrature for the cross-validating general path.
+  quadrature_points: 256
+  quadrature_points_refine: 512
+  # Filtered-Fock readout parameters for R_raw (Theorem 4.6).
+  algebra_level: 2          # K
+  algebra_mode_span: 3      # m_alg: audited |m|,|n| <= m_alg
+  algebra_charges: [0.0, 0.7]
+  central_charge: 1.0
+  # Manuscript's sharp annulus, eq. (2.2). The tapered variant is a labelled
+  # regulator diagnostic only and is never used for a manuscript claim.
+  #
+  # REGULATOR CLASSES. The frozen suite runs every kernel-level metric under
+  # both, in separate rows labelled by `regulator_class`:
+  #   sharp_annulus_manuscript  taper = 0.00  eq. (2.2) exactly as written
+  #   tapered_log_window        taper = 0.15  minimal raised-cosine taper in
+  #                                           log k, retained as an explicitly
+  #                                           labelled regulator diagnostic
+  # The sharp class is the manuscript claim; the tapered class exists solely to
+  # localize a sharp-cutoff (Gibbs) systematic and is never substituted for it.
+  regulator_taper: 0.0
+  regulator_taper_diagnostic: 0.15
+  regulator_classes:
+    sharp_annulus_manuscript: 0.0
+    tapered_log_window: 0.15
+
+# Explicit named seeds (mission engineering rule).
+named_seeds:
+  pairing_grid:        20260101
+  radius_plateau:      20260102
+  robustness_recompute: 20260103
+  convergence_s01:     20260201
+  convergence_s02:     20260202
+  convergence_s03:     20260203
+  convergence_s04:     20260204
+  convergence_s05:     20260205
+  convergence_s06:     20260206
+  convergence_s07:     20260207
+  convergence_s08:     20260208
+  convergence_s09:     20260209
+  convergence_s10:     20260210
+  controls_s01:        20260301
+  controls_s02:        20260302
+  controls_s03:        20260303
+  controls_s04:        20260304
+  controls_s05:        20260305
+  controls_s06:        20260306
+  tt_s01:              20260401
+  tt_s02:              20260402
+  tt_s03:              20260403
+  tt_s04:              20260404
+  tt_s05:              20260405
+  tt_s06:              20260406
+  tt_s07:              20260407
+  tt_s08:              20260408
+  tt_s09:              20260409
+  tt_s10:              20260410
+  tt_s11:              20260411
+  tt_s12:              20260412
+  ward_s01:            20260501
+  ward_s02:            20260502
+  ward_s03:            20260503
+  ward_s04:            20260504
+  ward_s05:            20260505
+  ward_s06:            20260506
+  ward_s07:            20260507
+  ward_s08:            20260508
+  ns_s01:              20260601
+  ns_s02:              20260602
+  ns_s03:              20260603
+  ns_s04:              20260604
+  ns_s05:              20260605
+  ns_s06:              20260606
+  ns_s07:              20260607
+  ns_s08:              20260608
+  central_offset:      20260701
+  current_reference:   20260801
+  vertex_s01:          20260901
+  vertex_s02:          20260902
+  vertex_s03:          20260903
+  vertex_s04:          20260904
+  vertex_s05:          20260905
+  vertex_s06:          20260906
+  cumulant_s01:        20261001
+  cumulant_s02:        20261002
+  cumulant_s03:        20261003
+  cumulant_s04:        20261004
+  cumulant_s05:        20261005
+  cumulant_s06:        20261006
+  cumulant_s07:        20261007
+  cumulant_s08:        20261008
+
+# ---------------------------------------------------------------------
+# WP-A  operational two-radius pairing
+# ---------------------------------------------------------------------
+wp_a:
+  # A3 radius-plateau campaign
+  radius_plateau:
+    regulators: [[1.0e-3, 1.0e+3], [1.0e-2, 1.0e+2]]
+    n_features: 200000
+    mode_cutoff: 8
+    rho_values: [1.25, 1.5, 2.0, 3.0]
+    r0_fractions: [0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95]
+    seeds: [convergence_s01, convergence_s02, convergence_s03, convergence_s04]
+    # Plateau algorithm (stated, not visual):
+    #   adjacent R_0 nodes are "compatible" when
+    #   |dY| <= k_sigma * sqrt(se_i^2 + se_j^2) + cauchy_green_bound(i,j)
+    #   and the plateau is the longest connected run of compatible edges.
+    plateau_k_sigma: 3.0
+    plateau_metric: anti_diagonal_amplitude_error
+    cauchy_green_radial_nodes: 96
+    cauchy_green_angular_nodes: 192
+
+  # A4 recomputation of the released 81-row regulator/width/mode grid (app. E)
+  robustness_grid:
+    lambda_ir: [1.0e-4, 1.0e-3, 1.0e-2]
+    lambda_uv: [1.0e+2, 1.0e+3, 1.0e+4]
+    n_features: [5000, 10000, 30000]
+    mode_cutoff: [8, 12, 16]
+    seeds: [robustness_recompute]
+    include_analytic_reference: true
+    include_projection_proxy: true
+
+  # A5 multi-seed width / cutoff convergence campaign
+  convergence:
+    regulators: [[1.0e-4, 1.0e+4], [1.0e-3, 1.0e+3], [1.0e-2, 1.0e+2]]
+    n_features: [2000, 5000, 10000, 30000, 100000, 300000]
+    mode_cutoff: [4, 8, 12, 16]
+    seeds: [convergence_s01, convergence_s02, convergence_s03, convergence_s04,
+            convergence_s05, convergence_s06, convergence_s07, convergence_s08,
+            convergence_s09, convergence_s10]
+    null_width_exponent: -0.5
+    # Adaptive design: the top width is run on the full mode grid but only on
+    # the two widest regulator pairs, to bound runtime. Documented in the
+    # progress report; every executed row is retained.
+    adaptive_top_width_regulators: 2
+
+  # A6 architecture controls.
+  # Regulator and mode cutoff chosen so the SELECTED architecture is inside its
+  # converged regime at the audited widths: the finite-N pairing noise scales
+  # like Lambda_UV/sqrt(N) and is amplified entrywise by rho^|m|, so the
+  # (1e-3,1e3) x Lambda=8 grid used elsewhere is noise-dominated at N <= 1e5 and
+  # would make the control comparison meaningless.
+  controls:
+    regulator: [1.0e-2, 1.0e+2]
+    # Five widths so the physical-admissibility diagnostics of appendix C
+    # (polarization minimum eigenvalue, involution defect, hermiticity defect)
+    # can be *fitted* against width rather than tabulated at two points. Two
+    # top-end seeds are traded for three extra cheap widths, so the stage does
+    # not get more expensive.
+    n_features: [10000, 30000, 100000, 300000, 1000000]
+    mode_cutoff: 4
+    seeds: [controls_s01, controls_s02, controls_s03, controls_s04]
+    architectures:
+      - selected_log_kernel
+      - rbf_gaussian_prior
+      - sign_breaking_mode_reassignment
+      - non_symplectic_dense_mixing
+      - anisotropic_angular_prior
+      - phase_correlated_features
+      - local_exponent_direction
+      - angular_mode_scramble
+    params:
+      anisotropy_amplitude: 0.6
+      local_exponent_epsilon: 0.5
+      mixing_condition_number: 8.0
+    ward_probe:
+      charges: [0.3, -0.3]
+      positions: [[0.9, 0.0], [-0.9, 0.0]]
+      probe_positions: [[0.0, 1.4], [1.6, 0.4], [-1.2, -0.8]]
+
+# ---------------------------------------------------------------------
+# WP-B  sampled TT central charge
+# ---------------------------------------------------------------------
+wp_b:
+  regulator: [1.0e-2, 1.0e+2]
+  n_features: [250, 750]
+  n_networks: 60000
+  batch_size: 512
+  n_circle_points: 48
+  circle_radius: 0.6
+  control_n_features: 250
+  control_seeds: [tt_s01, tt_s02, tt_s03, tt_s04]
+  seeds: [tt_s01, tt_s02, tt_s03, tt_s04, tt_s05, tt_s06,
+          tt_s07, tt_s08, tt_s09, tt_s10, tt_s11, tt_s12]
+  # Sampled-audit window. The connected <TT> signal-to-local-variance ratio is
+  #   corr = |K_JJ(r)| / Var(d phi)  ~  (Lambda_eff r)^-2 ,
+  # so the strict margin_uv = 30 of the pairing audits makes the sampled
+  # estimator require M ~ 1e8 realizations. This audit therefore uses a
+  # measured, explicitly recorded relaxed margin; the accompanying
+  # analytic_closed_kernel row at the SAME geometry quantifies the systematic.
+  window_margin_uv: 18.0
+  window_margin_ir: 1.2
+  # chords of the 48-point circle of radius 0.6 lie in [0.078, 1.2]
+  fit_window: [0.30, 0.55]
+  fit_window_variants: [[0.23, 0.80], [0.31, 0.53], [0.23, 0.46]]
+  controls: [rbf_gaussian_prior, angular_mode_scramble]
+
+# ---------------------------------------------------------------------
+# WP-C  sampled finite-network Ward identities
+# ---------------------------------------------------------------------
+wp_c:
+  regulator: [1.0e-2, 1.0e+2]
+  configurations:
+    two_vertex:
+      charges: [0.3, -0.3]
+      positions: [[0.85, 0.0], [-0.85, 0.0]]
+    three_vertex:
+      charges: [0.3, 0.3, -0.6]
+      positions: [[0.8, 0.0], [-0.4, 0.7], [-0.4, -0.7]]
+    four_vertex:
+      charges: [0.25, -0.25, 0.25, -0.25]
+      positions: [[0.9, 0.0], [0.0, 0.9], [-0.9, 0.0], [0.0, -0.9]]
+  probe_positions: [[0.0, 1.5], [1.7, 0.3], [-1.4, -0.9], [0.35, -1.8]]
+  # Adaptive design (documented, every executed row retained): the full
+  # N x M sweep is run for the selected architecture; the controls are run at
+  # the largest N and M only, which is where the discrimination is quoted.
+  n_features: [500, 1000, 2000]
+  n_networks: [2000, 8000, 32000]
+  batch_size: 256
+  # Six independent blocks: a percentile bootstrap over four blocks is too thin
+  # to quote an interval on. Cost scales as (sum N)(sum M) per block, so six is
+  # the most that keeps this stage inside its runtime budget.
+  seeds: [ward_s01, ward_s02, ward_s03, ward_s04, ward_s05, ward_s06]
+  deterministic_seeds: [ward_s01, ward_s02, ward_s03, ward_s04,
+                        ward_s05, ward_s06, ward_s07, ward_s08]
+  deterministic_n_features: [500, 2000, 20000, 200000]
+  controls: [rbf_gaussian_prior, angular_mode_scramble,
+             local_exponent_direction]
+  control_seeds: [ward_s01, ward_s02, ward_s03, ward_s04]
+  params:
+    local_exponent_epsilon: 0.5
+
+# ---------------------------------------------------------------------
+# WP-D  finite-feature NS super-Virasoro audit
+# ---------------------------------------------------------------------
+wp_d:
+  regulator: [1.0e-2, 1.0e+2]
+  n_features: [5000, 10000, 30000, 100000, 300000]
+  fermion_cutoff: 9          # largest |2r|
+  boson_mode_cutoff: 8
+  algebra_level: 1
+  r_alg: 5
+  # Adaptive design (documented, every executed row retained): the full width
+  # sweep is run for the selected architecture; the controls run at the top
+  # width only. The graded super-Virasoro residuals are symbolic and cost
+  # O(10 s) per configuration, so the grid is sized to the available budget.
+  seeds: [ns_s01, ns_s02, ns_s03, ns_s04, ns_s05]
+  controls: [rbf_gaussian_prior, angular_mode_scramble]
+  sampled_correlators:
+    n_networks: 4000
+    n_features: 4000
+    batch_size: 96
+    separations: [0.45, 0.60, 0.80, 1.05, 1.35, 1.70]
+
+# ---------------------------------------------------------------------
+# WP-E  extended central-offset model
+# ---------------------------------------------------------------------
+wp_e:
+  modes: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  mode_cutoffs: [16, 20, 24]
+  # raw empirical pairing used for the modewise anomaly
+  regulator: [1.0e-3, 1.0e+3]
+  n_features: [30000, 300000]
+  seeds: [central_offset, convergence_s01, convergence_s02, convergence_s03]
+  legacy_offset_reference: 0.1821971014211161
+
+# ---------------------------------------------------------------------
+# WP-F  reference current-kernel window
+# ---------------------------------------------------------------------
+wp_f:
+  regulators: [[1.0e-4, 1.0e+4], [1.0e-3, 1.0e+3], [1.0e-2, 1.0e+2]]
+  n_features: [10000, 100000, 300000]
+  seeds: [current_reference, convergence_s01, convergence_s02, convergence_s03]
+  n_eval_points: 96
+  # relative_error_definition is emitted per row.
+
+# ---------------------------------------------------------------------
+# WP-G  explicit edge remainder
+# ---------------------------------------------------------------------
+wp_g:
+  mode_pairs: [[1, -1], [2, -2], [3, -3], [4, -4], [2, -1], [3, -2], [-2, 1],
+               [2, 3], [-3, -1]]
+  mode_cutoffs: [2, 3, 4, 6, 8, 12]
+  filtered_check_levels: [0, 1, 2, 3, 4]
+  charges: [0.0, 0.7]
+
+# ---------------------------------------------------------------------
+# WP-H  sampled vertex weights and finite-width cumulant
+# ---------------------------------------------------------------------
+wp_h:
+  vertex:
+    regulator: [1.0e-2, 1.0e+2]
+    charges: [0.25, 0.4, 0.55, 0.7]
+    n_features: [1000, 2000, 4000]
+    n_networks: 8000
+    batch_size: 96
+    separations: [0.45, 0.55, 0.70, 0.90, 1.15, 1.45, 1.80]
+    fit_windows: [[0.45, 1.80], [0.55, 1.45], [0.70, 1.15]]
+    seeds: [vertex_s01, vertex_s02, vertex_s03, vertex_s04, vertex_s05, vertex_s06]
+  cumulant:
+    regulator: [1.0e-2, 1.0e+2]
+    n_features: [8, 16, 32, 64, 128]
+    n_samples: 1000000
+    seeds: [cumulant_s01, cumulant_s02, cumulant_s03, cumulant_s04,
+            cumulant_s05, cumulant_s06, cumulant_s07, cumulant_s08]
+    evaluation_radius: 1.0
+    fit_range: [8, 128]
+
+# ---------------------------------------------------------------------
+# WP-0  release integrity
+# ---------------------------------------------------------------------
+wp_0:
+  # Later-paper anchors that must never reappear as evidence (mission rule 10).
+  excluded_citation_keys: []
+  excluded_citation_patterns:
+    - "anomal"
+    - "neural string"
+    - "string theory"
+  # Collaborator-owned artifacts that must never appear (mission rule 9).
+  forbidden_artifacts:
+    - spectral_exponent_sweep
+    - powerlaw_exponent_sweep
+    - alpha_sweep
+    - exponent_sweep

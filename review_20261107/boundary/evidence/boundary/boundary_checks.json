@@ -1,0 +1,29 @@
+{
+  "seed": 20261107,
+  "features_per_batch": 16384,
+  "independent_batches": 32,
+  "IR": 0.001,
+  "UV": 1000.0,
+  "tau": 0.15,
+  "scalar_normalization": "K=-log|z-w|^2",
+  "scalar_statistic": "phase-averaged image covariance difference, yref=0.4",
+  "measured_log_slope": -1.9912861479473687,
+  "log_slope_standard_error": 0.007622313934101153,
+  "regulated_log_slope": -1.999994949334544,
+  "continuum_log_slope": -2,
+  "quadrature_tightening_max_abs": 1.4432899320127035e-15,
+  "scalar_largest_pointwise_standardized_difference": 3.153824302285399,
+  "scalar_continuum_max_abs_bias": 2.7953971192040683e-05,
+  "dirichlet_feature_residual": 0.0,
+  "neumann_derivative_residual": 0.0,
+  "scalar_current_gluing_residuals": {
+    "-1": 0.0,
+    "1": 0.0
+  },
+  "fermion_exchange_residual": 0.0,
+  "fermion_boundary_gluing_residual": 0.0,
+  "fermion_series_terms": 32,
+  "fermion_epsilon": 0.05,
+  "fermion_max_relative_truncation_error": 6.553788157353345e-12,
+  "scope": "Construction checks and two-point kernels; no annulus/Cardy or independent supersymmetry measurement."
+}

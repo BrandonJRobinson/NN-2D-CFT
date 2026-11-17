@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Exact commands executed by the frozen suite.
+set -euo pipefail
+python scripts/run_ordered_pairing_audit.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/run_sampled_tt.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/run_ward_audit.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/run_ns_audit.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/run_central_offset.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/run_current_kernel_reference.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/run_edge_remainder.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/run_vertex_and_cumulant.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/make_figures.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
+python scripts/make_frozen_manuscript.py --config configs/jhep_frozen.yaml --output-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/results/jhep_frozen --figure-dir /Users/brandonrobinson/Downloads/JHEP_active_v6_unblocked_bundle/figures_jhep_frozen
