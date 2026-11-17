@@ -322,11 +322,6 @@
       "rows": 520
     },
     {
-      "path": "results/jhep_frozen/sampled_tt_summary.md",
-      "bytes": 2577,
-      "sha256": "388593ad3757d983c79e23c99f3d262035e0584249caa47f2755bc69ca9a895a"
-    },
-    {
       "path": "results/jhep_frozen/sampled_vertex_weights.csv",
       "bytes": 24879,
       "sha256": "614a38e171ccc461963c7d29cfc8945601d589ce19bbc158015b5ac82a914f08",

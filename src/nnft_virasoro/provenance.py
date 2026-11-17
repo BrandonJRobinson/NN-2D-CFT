@@ -67,12 +67,7 @@ def git_dirty() -> bool:
     generated_prefixes = (
         "results/",
         "figures_jhep_frozen/",
-        "tables_jhep_frozen/",
         "figures_jhep_submission_hardening/",
-        "tables_jhep_submission_hardening/",
-        "Draft-JHEP-Frozen.tex",
-        "Virasoro_JHEP_Frozen.bib",
-        "JHEP_frozen_submission_bundle.zip",
         "test-output.xml",
     )
     for line in status.splitlines():

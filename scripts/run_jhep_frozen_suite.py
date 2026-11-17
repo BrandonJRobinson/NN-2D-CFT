@@ -9,10 +9,8 @@ Runs every work package in the mandated order (A -> B -> C -> D -> E -> F -> G
     results/jhep_frozen/manifest.json
     results/jhep_frozen/claim_ledger.csv
     results/jhep_frozen/all_metrics.csv
-    results/jhep_frozen/summary.md
     results/jhep_frozen/run_commands.sh
     results/jhep_frozen/environment.txt
-    results/jhep_frozen/git_status_after.txt
 """
 from __future__ import annotations
 
@@ -633,150 +631,8 @@ def build_all_metrics(outdir) -> pd.DataFrame:
     return pd.concat(frames, ignore_index=True, sort=False)
 
 
-def _section(led, title, predicate, note):
-    rows = [r for r in led if predicate(r)]
-    out = [f"### {title}", "", note, ""]
-    if not rows:
-        out += ["_No rows in this category._", ""]
-        return out
-    out += ["| claim | metric | value | uncertainty | 95% CI | status |",
-            "|---|---|---|---|---|---|"]
-    for r in rows:
-        out.append(f"| `{r['claim_id']}` | {r['metric']} | {r['value']} | "
-                   f"{r['uncertainty']} | {r['confidence_interval']} | "
-                   f"{r['status']} |")
-    out.append("")
-    return out
 
 
-def write_summary(outdir, cfg, ledger, manifest):
-    counts = pd.Series([r["status"] for r in ledger]).value_counts()
-    lines = [
-        "# JHEP Virasoro frozen evidence campaign - summary", "",
-        f"Generated {utc_now()} | commit `{git_commit()[:12]}` | "
-        f"config hash `{cfg.hash}`", "",
-        "## 1. How to read this release", "",
-        "Every quantitative statement is one row of "
-        "`results/jhep_frozen/claim_ledger.csv`, carrying its estimator class, "
-        "seed set, uncertainty, generating script, config hash, input and output "
-        "artifacts, and git commit. Nothing below is hand-entered.", "",
-        "### Estimator classes (never pooled in one uncertainty calculation)", "",
-        "| class | meaning |", "|---|---|",
-        "| `exact_symbolic` | closed-form identity on the ordered-word algebra or "
-        "the filtered Fock space; machine-precision zero |",
-        "| `analytic_closed_kernel` | exact regulated Bessel kernel; "
-        "deterministic, no seed |",
-        "| `deterministic_finite_feature` | fixed momentum sample with the phases "
-        "averaged analytically; seeded but exact given the sample |",
-        "| `sampled_finite_network` | Monte Carlo over independent network "
-        "realizations; carries sampling uncertainty |", "",
-        "### Regulator classes", "",
-        "Every kernel-level metric is reported under both:", "",
-        "- **`sharp_annulus_manuscript`** (taper 0.00) - eq. (2.2) exactly as "
-        "written. **This is the manuscript claim.**",
-        "- **`tapered_log_window`** (taper 0.15) - the same `|k|^-2` prior with a "
-        "raised-cosine taper in `log k`. **A labelled regulator diagnostic "
-        "only**, used to localize a sharp-cutoff systematic. It is never "
-        "substituted for the manuscript claim.", "",
-        "## 2. Ledger status counts", "", "| status | rows |", "|---|---|",
-    ]
-    for k, v in counts.items():
-        lines.append(f"| {k} | {v} |")
-    lines += ["", "## 3. Results by evidence category", ""]
-
-    lines += _section(
-        ledger, "3.1 Exact mathematical results",
-        lambda r: r["estimator_class"] == "exact_symbolic",
-        "Closed-form identities. Theorem 4.6 holds exactly on the filtered Fock "
-        "subspace; the canonical truncated Sugawara algebra reproduces "
-        "`m(m^2-1)/12` exactly; the NS super-Virasoro algebra closes with "
-        "`c = 3/2` exactly.")
-    lines += _section(
-        ledger, "3.2 Analytic closed-kernel computations",
-        lambda r: r["estimator_class"] == "analytic_closed_kernel",
-        "Exact regulated Bessel kernel, no sampling. These rows isolate the "
-        "**regulator systematic** from finite-`N` noise.")
-    lines += _section(
-        ledger, "3.3 Deterministic finite-feature computations",
-        lambda r: (r["estimator_class"] == "deterministic_finite_feature"
-                   and "control" not in r["claim_id"]),
-        "Fixed momentum sample, phases averaged analytically. Uncertainties are "
-        "spreads over independent named seeds.")
-    lines += _section(
-        ledger, "3.4 Sampled neural-ensemble measurements",
-        lambda r: r["estimator_class"] == "sampled_finite_network",
-        "Monte Carlo over independent network realizations. One block per named "
-        "seed; the bootstrap resamples blocks, never individual realizations; "
-        "regulator spread is never used as sampling uncertainty.")
-    lines += _section(
-        ledger, "3.5 Architecture-discriminating evidence",
-        lambda r: ("control" in r["claim_id"]
-                   and "post_darboux" not in r["claim_id"]),
-        "Radial discrimination is carried by the antidiagonal amplitude and the "
-        "raw Sugawara residual; chiral/angular discrimination by the Ward "
-        "identities. Under the *operational* two-radius definition the leakage "
-        "of a rotationally invariant prior vanishes identically, so leakage "
-        "discriminates angular, not radial, structure.")
-    lines += _section(
-        ledger, "3.6 Post-Darboux implementation checks (non-discriminating)",
-        lambda r: ("post_darboux" in r["claim_id"]
-                   or "admissibility" in r["claim_id"]),
-        "Proposition 3.5 makes symplectic closure universal for nondegenerate "
-        "antisymmetric forms, so these rows are **not** architecture evidence. "
-        "The operator-level discriminators are the involution defect "
-        "`||conj(S)C - CS||_F/||S||_F` and the positivity of the induced Fock "
-        "polarization; unrestricted Darboux equivalence does not imply unitary "
-        "equivalence.")
-    lines += _section(
-        ledger, "3.7 Failed gates and inconclusive controls",
-        lambda r: r["status"] in ("failed_gate", "inconclusive"),
-        "Retained verbatim. No failed gate is replaced by prose.")
-
-    lines += [
-        "## 4. Regulator limitations (the campaign's central finding)", "",
-        "The scalar covariance eq. (A.1) converges cleanly, but the current "
-        "kernel is its **second** derivative. The sharp annular support of "
-        "eq. (2.2) contributes an endpoint term `b J_1(b)`, `b = Lambda_UV r`, "
-        "whose amplitude grows like `b^(1/2)`. Consequences, each verified "
-        "three independent ways (closed-form Bessel derivatives against "
-        "numerical second differentiation; direct Monte Carlo of the "
-        "finite-feature field; a tapered spectral integrator that reproduces "
-        "the sharp closed form at taper 0):", "",
-        "1. `K_JJ^Lambda` has **no conformal limit** under eq. (2.2): widening "
-        "the annulus increases the deviation from `(z-w)^-2`.",
-        "2. The shape error of the amplitude fit is 114-143% anywhere inside the "
-        "nominal physical window (WP-F).",
-        "3. `d_zbar K_JJ` of eq. (3.15) grows like `b^(3/2)`, so Proposition 3.4 "
-        "predicts the failure quantitatively, and the Cauchy-Green bound of "
-        "Proposition 3.6 - while satisfied by every measured radius variation - "
-        "is correspondingly loose.",
-        "4. A 15% raised-cosine taper in `log k`, the minimal smooth modification "
-        "of the same `|k|^-2` prior, reduces the shape error to ~2%, restores the "
-        "`kappa = 1` amplitude, reduces `|d_zbar K_JJ|` by more than four orders "
-        "of magnitude, and brings the operational pairing to "
-        "`eps_pair ~ 1e-4`.", "",
-        "**The architecture claim survives; the regulator written in eq. (2.2) "
-        "does not.** Both classes are released side by side so a reader can see "
-        "exactly which claims depend on which.", "",
-        "## 5. Artifacts", "", "| artifact | rows | sha256 (first 16) |",
-        "|---|---|---|"]
-    for a in manifest["artifacts"]:
-        lines.append(f"| `{a['path']}` | {a.get('rows', '-')} | "
-                     f"`{a['sha256'][:16]}` |")
-    lines += ["", "## 6. Complementary interpretation (reported verbatim)", "",
-              COMPLEMENTARY_INTERPRETATION, "",
-              "## 7. Reproduction", "",
-              "```bash",
-              "python scripts/run_jhep_frozen_suite.py \\",
-              "  --config configs/jhep_frozen.yaml \\",
-              "  --skip-existing",
-              "python scripts/check_jhep_claim_gates.py --submission",
-              "```", "",
-              "Exact commands as executed are in `run_commands.sh`; the "
-              "environment is in `environment.txt`; per-work-package reports are "
-              "in `progress/`.", ""]
-    (Path(outdir) / "summary.md").write_text("\n".join(lines) + "\n",
-                                             encoding="utf-8")
 
 
 def main() -> int:
@@ -785,7 +641,6 @@ def main() -> int:
                    help="comma-separated WP names, or 'all', or 'none' to only "
                         "rebuild the release artifacts")
     p.add_argument("--no-figures", action="store_true")
-    p.add_argument("--no-manuscript", action="store_true")
     args = p.parse_args()
     cfg, stamper, outdir, figdir = setup(args, SCRIPT)
     want = {s.strip().upper() for s in args.stages.split(",")}
@@ -816,7 +671,6 @@ def main() -> int:
     artifacts = []
     for pth in sorted(list(Path(outdir).glob("*.csv"))
                       + list(Path(outdir).glob("*.json"))
-                      + list(Path(outdir).glob("*.md"))
                       + list(Path(figdir).glob("*.pdf"))):
         rec = dict(path=str(pth.relative_to(ROOT)), bytes=pth.stat().st_size,
                    sha256=file_sha256(pth))
@@ -845,18 +699,7 @@ def main() -> int:
         "set -euo pipefail\n" + "\n".join(commands) + "\n", encoding="utf-8")
     (Path(outdir) / "environment.txt").write_text(environment_text(),
                                                   encoding="utf-8")
-    write_summary(outdir, cfg, ledger, manifest)
 
-    # The frozen manuscript and its tables are generated LAST, so they are never
-    # stale with respect to the CSVs they quote.
-    if not args.no_manuscript:
-        run_stage("manuscript", "scripts/make_frozen_manuscript.py", [], args,
-                  commands)
-        (Path(outdir) / "run_commands.sh").write_text(
-            "#!/usr/bin/env bash\n# Exact commands executed by the frozen suite.\n"
-            "set -euo pipefail\n" + "\n".join(commands) + "\n", encoding="utf-8")
-    (Path(outdir) / "git_status_after.txt").write_text(
-        git_status_short() + "\n", encoding="utf-8")
     print(f"  claim_ledger.csv: {len(ledger)} rows")
     print(f"  all_metrics.csv: {len(allm)} rows")
     print(f"  manifest.json: {len(artifacts)} artifacts")

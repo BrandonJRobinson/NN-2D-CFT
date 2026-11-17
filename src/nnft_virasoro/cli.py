@@ -22,8 +22,8 @@ def base_parser(description: str) -> argparse.ArgumentParser:
     p.add_argument("--skip-existing", action="store_true",
                    help="skip artifacts that already exist and are non-empty")
     p.add_argument("--allow-dirty", action="store_true", default=True,
-                   help="allow stamping from a dirty code tree (default true; the "
-                        "submission checker enforces cleanliness separately)")
+                   help="allow stamping from a dirty code tree; the recorded "
+                        "provenance includes its dirty state")
     return p
 
 

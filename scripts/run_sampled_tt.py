@@ -28,8 +28,7 @@ def main() -> int:
     cfg, stamper, outdir, figdir = setup(args, SCRIPT)
     rows_path = outdir / "sampled_tt_seed_rows.csv"
     agg_path = outdir / "sampled_tt_central_charge.csv"
-    md_path = outdir / "sampled_tt_summary.md"
-    if all(should_skip(p, args.skip_existing) for p in (rows_path, agg_path, md_path)):
+    if all(should_skip(p, args.skip_existing) for p in (rows_path, agg_path)):
         print("  [skip] WP-B")
         return 0
 
@@ -159,37 +158,7 @@ def main() -> int:
         sort_by=["regulator_class", "architecture", "estimator_variant",
                  "n_features", "fit_window_index"])
 
-    lines = ["# WP-B sampled <TT> central charge", "",
-             "## Estimator provenance (mission B1)", ""]
-    for k, v in ST.ESTIMATOR_PROVENANCE.items():
-        lines.append(f"- **{k}**: {v}")
-    lines += ["", f"- **fit interval (reference)**: {sec['fit_window']}",
-              f"- **fit-window variants**: {sec['fit_window_variants']}",
-              f"- **number of network realizations**: {sec['n_networks']} per seed",
-              f"- **feature widths**: {sec['n_features']}",
-              f"- **seed set**: {sec['seeds']}",
-              f"- **block/bootstrap method**: one block per named seed; "
-              f"percentile bootstrap over blocks (20000 resamples, seed 20260730); "
-              f"delete-one jackknife also reported", "",
-              "## Reference results (selected architecture, reference window)", "",
-              "| regulator class | estimator | N | c_exp | stderr | 95% bootstrap CI"
-              " | blocks | compatible with c=1 |",
-              "|---|---|---|---|---|---|---|---|"]
-    for r in agg:
-        if r["architecture"] != "selected_log_kernel" or r["fit_window_index"] != 0:
-            continue
-        lines.append(
-            f"| {r['regulator_class']} | {r['estimator_variant']} | "
-            f"{r['n_features']} | {r['c_exp']:.4f} | "
-            f"{r['c_exp_stderr']:.4f} | [{r['c_exp_boot_ci_low']:.4f}, "
-            f"{r['c_exp_boot_ci_high']:.4f}] | {r['n_blocks']} | "
-            f"{r['compatible_with_c1']} |")
-    lines += ["", "Legacy comparison (NOT used as input): the unmounted release "
-              "quoted c_exp = 0.9958 +- 0.0196.  Every number above is regenerated "
-              "by this script from native code.", ""]
-    md_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"  wrote {rows_path.name} ({len(rows)}), {agg_path.name} ({len(agg)}), "
-          f"{md_path.name}")
+    print(f"Wrote {rows_path.name} and {agg_path.name}")
     return 0
 
 

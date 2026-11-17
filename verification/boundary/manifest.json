@@ -1,0 +1,55 @@
+{
+  "title": "Boundary conformal neural fields: reproducible kernel checks",
+  "version": "2026-11-07-review-candidate",
+  "python": "3.13.2",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "matplotlib": "3.10.8",
+  "files": [
+    {
+      "path": "README.txt",
+      "bytes": 538,
+      "sha256": "e480edc05a15e2747ca575bfb48561244e4126bddaea29578687bbbe94f07e72"
+    },
+    {
+      "path": "evidence/boundary/boundary_batches.npz",
+      "bytes": 9002,
+      "sha256": "fac977023ebc32f824a6f7ce3320d08017b05cdeaffe93df8856163d5cc87904"
+    },
+    {
+      "path": "evidence/boundary/boundary_checks.json",
+      "bytes": 1077,
+      "sha256": "666167ea3d89b4c3ec1af5bc855cca669b9d9684dad94f6fefb7afd6901fb9c7"
+    },
+    {
+      "path": "evidence/boundary/boundary_kernels.png",
+      "bytes": 88381,
+      "sha256": "ff1827c15a9e1067f8a8d410323f94bc6f32d9661c5717a3d1a190de5a8e930c"
+    },
+    {
+      "path": "evidence/boundary/scalar_image.csv",
+      "bytes": 2197,
+      "sha256": "48fbfa169136e565f9ca88d8e208a83c7940696bce5d49715f7aee55cc78c326"
+    },
+    {
+      "path": "figures/boundary_kernels.pdf",
+      "bytes": 31402,
+      "sha256": "d05696fb2aefb44c497d912941055f091619b795d7963aec9f527c48a996c849"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 74,
+      "sha256": "0314f6577600eadd36bff1e4b7df5f546318730b00b030557872374f19af08a0"
+    },
+    {
+      "path": "scripts/boundary_checks.py",
+      "bytes": 7708,
+      "sha256": "f8314e11d5eab9cc9a57646fdec4f1e0aea7473f6f2732545ffd1a3336ecfb0f"
+    },
+    {
+      "path": "verify_boundary_evidence.py",
+      "bytes": 543,
+      "sha256": "1d1a4fba555f91b65360a6971305c2ac0a373747aa3a06d06c17893440360a32"
+    }
+  ]
+}

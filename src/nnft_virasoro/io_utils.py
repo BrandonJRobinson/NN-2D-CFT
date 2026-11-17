@@ -10,12 +10,11 @@ import pandas as pd
 from .provenance import PROVENANCE_COLUMNS, require_columns
 
 __all__ = ["write_rows", "write_json", "should_skip", "read_rows", "RESULTS", "FIGURES",
-           "TABLES", "ROOT"]
+           "ROOT"]
 
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "results" / "jhep_frozen"
 FIGURES = ROOT / "figures_jhep_frozen"
-TABLES = ROOT / "tables_jhep_frozen"
 
 
 def should_skip(path: Path, skip_existing: bool) -> bool:

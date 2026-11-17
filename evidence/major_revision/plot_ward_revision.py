@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Draw the historical absolute Ward errors and new exact-phase benchmark."""
 from pathlib import Path
+import argparse
 import os
 import tempfile
 os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "virasoro-figure-font-cache"))
@@ -13,8 +14,10 @@ import pandas as pd
 from scipy.stats import t
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT.parent / "figures"
-OUT.mkdir(exist_ok=True)
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--output-dir", type=Path, default=ROOT.parent / "figures")
+OUT = parser.parse_args().output_dir
+OUT.mkdir(exist_ok=True, parents=True)
 WIDTH = 5.6
 plt.rcParams.update({
     "font.family": "DejaVu Sans", "font.size": 10.5, "axes.labelsize": 10.5,

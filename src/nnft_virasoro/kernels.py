@@ -1,7 +1,7 @@
 r"""Regulated Log-Kernel covariances, current kernels, and non-holomorphy.
 
-Manuscript conventions (``Draft-JHEP-Active-v6.tex``)
-----------------------------------------------------
+Kernel and normalization conventions
+------------------------------------
 Field, eq. (2.1)::
 
     phi_N(x) = (sigma_phi/sqrt(N)) sum_j cos(k_j.x + gamma_j),  gamma_j ~ U[0,2pi)

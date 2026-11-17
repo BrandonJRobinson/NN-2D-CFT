@@ -1,10 +1,7 @@
-# Installation and verification
+# Installation
 
-Use Python 3.10 or newer. Historical production versions remain in
-requirements-historical.txt and the evidence environment records.
+Use Python 3.10 or newer.
 
-    git clone https://github.com/BrandonJRobinson/NN-2D-CFT.git
-    cd NN-2D-CFT
     python3 -m venv .venv
     source .venv/bin/activate
     python -m pip install -r requirements.txt
@@ -12,16 +9,12 @@ requirements-historical.txt and the evidence environment records.
     python -m pytest tests -q
 
 The standard-library verifier can run before installing dependencies.
-Timestamp normalization follows successful checksum verification and
-accommodates only the legacy figure-freshness test.
+The optional timestamp normalization follows successful content verification.
+Scripts and tests import the numerical package from src/.
 
-Scripts and tests import the source package from src/; installing the
-package itself is unnecessary. The Git checkout runs all 215 original tests.
-For an archive extracted without Git history, omit its single metadata test:
+For a source archive without Git history, omit the single Git-metadata test:
 
     python -m pytest tests -q -k 'not test_stamper_rejects_an_unknown_estimator_class'
 
-The independent numerical audit uses NumPy, SciPy and pandas. Recovered-sector
-checks use SymPy. The boundary and exact-phase supplements provide separate
-README files, version records and verification scripts. The April notebook
-instructions remain under legacy/april_2026/.
+Historical production package versions are in requirements-historical.txt.
+The boundary and Ward calculations also record their numerical environments.

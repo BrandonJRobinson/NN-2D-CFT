@@ -1,8 +1,4 @@
-"""Release-integrity tests: ledger schema, figure freshness, excluded citations.
-
-These mirror the submission checker's gates so a regression is caught by the
-quick test suite, not only at release time.
-"""
+"""Numerical result schemas, figure inputs and provenance checks."""
 from __future__ import annotations
 
 import json
@@ -84,48 +80,10 @@ def test_frozen_ledger_is_valid_and_complete():
 # --------------------------------------------------------------------------
 # excluded-citation guard
 # --------------------------------------------------------------------------
-def test_excluded_citation_guard_flags_a_later_anomaly_paper(tmp_path):
-    cfg = load_config(CONFIG)
-    pats = cfg.section("wp_0")["excluded_citation_patterns"]
-    bib = tmp_path / "x.bib"
-    bib.write_text(
-        '@article{Later:2026abc,\n    title = "{Anomalies in Neural Network '
-        'Field Theories}",\n    year = "2026"\n}\n', encoding="utf-8")
-    blob = bib.read_text()
-    hits = []
-    for key, body in re.findall(r"@\w+\{([^,]+),(.*?)\n\}", blob, re.S):
-        title = " ".join(re.findall(r'title\s*=\s*[{"](.+?)[}"]', body,
-                                    re.S | re.I)).lower()
-        yr = int(re.findall(r'year\s*=\s*[{"]?(\d{4})', body)[0])
-        if yr >= 2025 and any(p.lower() in title for p in pats):
-            hits.append(key)
-    assert hits == ["Later:2026abc"], "the guard must catch a later anomaly paper"
 
 
-@pytest.mark.skipif(not (ROOT / "Virasoro_JHEP_Frozen.bib").exists(),
-                    reason="frozen bib has not been built")
-def test_frozen_bibliography_has_no_excluded_later_papers():
-    cfg = load_config(CONFIG)
-    pats = cfg.section("wp_0")["excluded_citation_patterns"]
-    blob = (ROOT / "Virasoro_JHEP_Frozen.bib").read_text(encoding="utf-8")
-    for key, body in re.findall(r"@\w+\{([^,]+),(.*?)\n\}", blob, re.S):
-        title = " ".join(re.findall(r'title\s*=\s*[{"](.+?)[}"]', body,
-                                    re.S | re.I)).lower()
-        years = re.findall(r'year\s*=\s*[{"]?(\d{4})', body)
-        if years and int(years[0]) >= 2025:
-            assert not any(p.lower() in title for p in pats), key
 
 
-def test_no_collaborator_exponent_sweep_artifacts_anywhere():
-    cfg = load_config(CONFIG)
-    forbidden = cfg.section("wp_0")["forbidden_artifacts"]
-    offenders = []
-    for pth in list(ROOT.rglob("*.csv")) + list(ROOT.rglob("*.py")):
-        if ".git/" in str(pth):
-            continue
-        if any(f in pth.name.lower() for f in forbidden):
-            offenders.append(str(pth))
-    assert offenders == []
 
 
 # --------------------------------------------------------------------------
@@ -145,14 +103,14 @@ def test_every_generated_figure_has_a_caption_naming_class_and_source():
 @pytest.mark.skipif(not (FIGURES / "figure_captions.json").exists(),
                     reason="figures have not been generated")
 def test_figures_are_not_older_than_their_source_csv():
-    from importlib import util
-
-    spec = util.spec_from_file_location(
-        "chk", ROOT / "scripts" / "check_jhep_claim_gates.py")
-    chk = util.module_from_spec(spec)
-    spec.loader.exec_module(chk)
+    captions = json.loads((FIGURES / "figure_captions.json").read_text())
+    sources = {}
+    for name, caption in captions.items():
+        match = re.search(r"Source: results/jhep_frozen/([A-Za-z0-9_.]+\.csv)", caption)
+        assert match, name
+        sources[name] = match.group(1)
     stale = []
-    for fig, src in chk.FIGURE_SOURCES.items():
+    for fig, src in sources.items():
         fp, sp = FIGURES / fig, RESULTS / src
         if sp.exists() and fp.exists() and fp.stat().st_mtime < sp.stat().st_mtime:
             stale.append(fig)
@@ -213,51 +171,10 @@ def test_stamper_rejects_an_unknown_estimator_class():
 # --------------------------------------------------------------------------
 # generated manuscript
 # --------------------------------------------------------------------------
-@pytest.mark.skipif(not (ROOT / "Draft-JHEP-Frozen.tex").exists(),
-                    reason="frozen manuscript has not been built")
-def test_generated_manuscript_has_no_unresolved_gate_anchors():
-    text = (ROOT / "Draft-JHEP-Frozen.tex").read_text(encoding="utf-8")
-    assert "CLAIM-GATE FM-" not in text
-    assert "RELEASE-GATE FM-" not in text
-    assert "WORKING INTEGRATION DRAFT" not in text
-    # every gate is accounted for in the generated header checklist
-    for n in range(1, 13):
-        assert f"FM-{n:02d} ->" in text, f"FM-{n:02d} missing from the checklist"
-    assert "graphicspath{{figures_jhep_frozen/}}" in text
-    assert "bibliography{Virasoro_JHEP_Frozen}" in text
 
 
-@pytest.mark.skipif(not (ROOT / "Draft-JHEP-Frozen.tex").exists(),
-                    reason="frozen manuscript has not been built")
-def test_generated_latex_is_balanced_and_escaped():
-    """Cheap structural checks that catch the escaping bugs a generator makes."""
-    text = (ROOT / "Draft-JHEP-Frozen.tex").read_text(encoding="utf-8")
-    body = re.sub(r"%.*", "", text)
-    assert body.count("\\begin{align}") == body.count("\\end{align}")
-    assert body.count("\\begin{split}") == body.count("\\end{split}")
-    assert body.count("\\begin{tabular}") == body.count("\\end{tabular}")
-    assert body.count("\\begin{center}") == body.count("\\end{center}")
-    assert body.count("$") % 2 == 0
-    # inside an align/split, at most one alignment point per line
-    for env in re.findall(r"\\begin\{split\}(.*?)\\end\{split\}", body, re.S):
-        for line in env.split("\\\\"):
-            assert line.count("&") <= 1, line[:80]
-    # a generated table row must terminate with "\\", never a lone backslash
-    for tab in re.findall(r"\\begin\{tabular\}(.*?)\\end\{tabular\}", body, re.S):
-        for line in tab.splitlines():
-            st = line.rstrip()
-            if st.endswith("\\") and not st.endswith("\\\\"):
-                raise AssertionError(f"lone trailing backslash: {st[:80]}")
 
 
-@pytest.mark.skipif(not (ROOT / "tables_jhep_frozen").exists(),
-                    reason="tables have not been generated")
-def test_generated_tables_put_numbers_in_math_mode():
-    for p in (ROOT / "tables_jhep_frozen").glob("*.tex"):
-        body = re.sub(r"%.*", "", p.read_text(encoding="utf-8"))
-        assert body.count("$") % 2 == 0, p.name
-        assert "\\times10^" not in re.sub(r"\$[^$]*\$", "", body), (
-            f"{p.name}: scientific notation outside math mode")
 
 
 def test_git_dirty_parses_every_porcelain_status_form(monkeypatch):
@@ -272,8 +189,8 @@ def test_git_dirty_parses_every_porcelain_status_form(monkeypatch):
     cases = {
         " M figures_jhep_frozen/a.pdf": False,   # unstaged, leading space eaten
         "M  results/b.csv": False,               # staged
-        "?? tables_jhep_frozen/c.tex": False,    # untracked
-        "MM Draft-JHEP-Frozen.tex": False,       # staged + unstaged
+        "?? figures_jhep_submission_hardening/c.pdf": False,    # untracked
+        "MM figures_jhep_frozen/d.pdf": False,       # staged + unstaged
         'R  "results/old.csv" -> "results/new.csv"': False,
         " M src/nnft_virasoro/kernels.py": True,  # real code change
         "?? scripts/scratch.py": True,

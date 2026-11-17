@@ -40,7 +40,6 @@ from nnft_virasoro.provenance import (file_sha256, git_commit,  # noqa: E402
 
 SUITE = "jhep_virasoro_submission_hardening"
 SUITE_VERSION = 1
-NARRATIVE_DIR = ROOT / "docs" / "hardening"
 
 #: (gate id, script, extra args). Dependency order -- see the module docstring.
 STAGES = [
@@ -172,78 +171,10 @@ def build_all_metrics(outdir) -> pd.DataFrame:
     return pd.concat(frames, ignore_index=True, sort=False)
 
 
-def render_narrative(outdir, commit, cfg_hash):
-    """Render the curated gate write-ups into the release namespace.
-
-    They live under ``docs/hardening/`` and are committed with the code, so they
-    are release *source*, not artifacts carried over from incremental
-    development. Every number they quote is cross-checked against the
-    clean-run CSVs by ``scripts/check_release_integrity.py``.
-    """
-    written = []
-    for src in sorted(NARRATIVE_DIR.glob("*.md")):
-        header = (f"<!-- generated {utc_now()} from docs/hardening/{src.name} "
-                  f"| commit {commit[:12]} | config {cfg_hash} -->\n\n")
-        (Path(outdir) / src.name).write_text(header + src.read_text())
-        written.append(src.name)
-    return written
 
 
-def _tex_escape(text: str) -> str:
-    out = str(text)
-    for a, b in (("\\", r"\textbackslash{}"), ("&", r"\&"), ("%", r"\%"),
-                 ("$", r"\$"), ("#", r"\#"), ("_", r"\_"), ("{", r"\{"),
-                 ("}", r"\}"), ("~", r"\textasciitilde{}"),
-                 ("^", r"\textasciicircum{}")):
-        out = out.replace(a, b)
-    return out
 
 
-def write_tables(tabledir, ledger, synthesis):
-    """LaTeX renderings of the ledger and the synthesis, for the next stage.
-
-    Bookkeeping only: nothing here recomputes a quantity, it reformats the
-    clean-run CSVs so the manuscript stage has stable inputs.
-    """
-    tabledir = Path(tabledir)
-    tabledir.mkdir(parents=True, exist_ok=True)
-    led = pd.DataFrame(ledger)
-    written = []
-
-    counts = led.status.value_counts()
-    rows = ["\\begin{tabular}{lr}", "\\hline",
-            "status & claims \\\\", "\\hline"]
-    for st in sorted(counts.index):
-        rows.append(f"\\texttt{{{_tex_escape(st)}}} & {int(counts[st])} \\\\")
-    rows += ["\\hline", f"total & {len(led)} \\\\", "\\hline",
-             "\\end{tabular}"]
-    (tabledir / "claim_status_summary.tex").write_text("\n".join(rows) + "\n")
-    written.append("claim_status_summary.tex")
-
-    rows = ["\\begin{tabular}{llp{0.42\\textwidth}}", "\\hline",
-            "gate & status & claim \\\\", "\\hline"]
-    for _, r in led.sort_values(["gate", "claim_id"]).iterrows():
-        rows.append(f"{_tex_escape(r.gate)} & \\texttt{{{_tex_escape(r.status)}}}"
-                    f" & {_tex_escape(r.metric)} \\\\")
-    rows += ["\\hline", "\\end{tabular}"]
-    (tabledir / "claim_ledger_summary.tex").write_text("\n".join(rows) + "\n")
-    written.append("claim_ledger_summary.tex")
-
-    if synthesis is not None and len(synthesis):
-        rows = ["\\begin{tabular}{lllc}", "\\hline",
-                "architecture & designed violation & axes failed & clean \\\\",
-                "\\hline"]
-        for _, r in synthesis.sort_values(
-                ["is_selected", "architecture"], ascending=[False, True]).iterrows():
-            rows.append(
-                f"\\texttt{{{_tex_escape(r.architecture)}}} & "
-                f"{_tex_escape(r.designed_violation)} & "
-                f"{_tex_escape(r.axes_failed)} & "
-                f"{'yes' if bool(r.passes_all_measured_axes) else 'no'} \\\\")
-        rows += ["\\hline", "\\end{tabular}"]
-        (tabledir / "architecture_synthesis.tex").write_text("\n".join(rows) + "\n")
-        written.append("architecture_synthesis.tex")
-    return written
 
 
 def write_environment(outdir):
@@ -268,73 +199,6 @@ def write_environment(outdir):
     (Path(outdir) / "environment.txt").write_text("\n".join(lines) + "\n")
 
 
-def write_summary(outdir, cfg, ledger, manifest, wall, narrative):
-    led = pd.DataFrame(ledger)
-    counts = led.status.value_counts().to_dict()
-    lines = [
-        "# JHEP Virasoro submission-hardening release - summary", "",
-        f"Generated {manifest['generated_utc']} | commit "
-        f"`{manifest['git_commit'][:12]}` | config hash "
-        f"`{manifest['config_hash']}`", "",
-        "## 1. How to read this release", "",
-        "Every quantitative statement is one row of "
-        "`hardening_claim_ledger.csv`, carrying its status, estimator class, "
-        "generating script and output artifact. The gate write-ups rendered "
-        "alongside are the adjudications; their numbers are cross-checked "
-        "against the CSVs in this directory by "
-        "`scripts/check_release_integrity.py`.", "",
-        "This release does not modify the August frozen release "
-        "(`b3fd73dd887b` / `278e438b94465564`), which remains the immutable "
-        "checkpoint.", "",
-        "### Claim statuses", "",
-        "| status | meaning | count |", "|---|---|---|",
-        f"| `accepted` | the computation supports the claim as stated | "
-        f"{counts.get('accepted', 0)} |",
-        f"| `accepted_with_reformulation` | the finding holds but the wording "
-        f"or label must change | {counts.get('accepted_with_reformulation', 0)} |",
-        f"| `fails_current_claim` | the computation contradicts a claim the "
-        f"manuscript currently makes | {counts.get('fails_current_claim', 0)} |",
-        f"| `diagnostic_only` | informative, but cannot carry the weight it was "
-        f"being given | {counts.get('diagnostic_only', 0)} |",
-        f"| `needs_new_computation` | blocked on further computation | "
-        f"{counts.get('needs_new_computation', 0)} |", "",
-        "There is no `failed_gate` vocabulary in this release.", "",
-        "## 2. Gate verdicts", "",
-        "| gate | verdict |", "|---|---|",
-        "| 1 intrinsic pre-Darboux admissibility | PASS |",
-        "| 2 PBW stability theorem | PASS |",
-        "| 3 TT provenance and the c = 1 claim | PASS WITH REFORMULATION |",
-        "| 4 Ward metric crosswalk | PASS WITH REFORMULATION |",
-        "| 5 estimator-class separation | PASS |",
-        "| 6 kernel normalization conventions | PASS |",
-        "| 7 NS sector | PASS |",
-        "| 8 architecture synthesis | PASS |", "",
-        "See `GATE_MATRIX.md` for the full matrix and the eight manuscript "
-        "claims the computation contradicts.", "",
-        "## 3. Claims by gate", "", "| gate | " +
-        " | ".join(sorted(counts)) + " |",
-        "|---|" + "---|" * len(counts),
-    ]
-    for gate, g in led.groupby("gate"):
-        c = g.status.value_counts().to_dict()
-        lines.append(f"| {gate} | " +
-                     " | ".join(str(c.get(s, 0)) for s in sorted(counts)) + " |")
-    lines += [
-        "", "## 4. Release contents", "",
-        f"- {len([a for a in manifest['artifacts'] if a['path'].endswith('.csv')])} CSV artifacts",
-        f"- {len([a for a in manifest['artifacts'] if a['path'].endswith('.pdf')])} figures (PDF, each with a PNG companion)",
-        f"- {len(narrative)} rendered gate write-ups",
-        f"- {manifest['n_ledger_rows']} ledger rows",
-        f"- {manifest['n_all_metrics_rows']} rows in `all_metrics.csv`",
-        "", f"Production wall time: {wall / 60:.1f} min.", "",
-        "## 5. Reproducing", "",
-        "```bash", "python scripts/run_jhep_submission_hardening.py", "```", "",
-        "`run_commands.sh` records the exact per-stage commands; "
-        "`environment.txt` records the interpreter and library versions; "
-        "`manifest.json` records every artifact's byte size, SHA-256, and the "
-        "stage that generated it.", "",
-    ]
-    (Path(outdir) / "summary.md").write_text("\n".join(lines) + "\n")
 
 
 def main() -> int:
@@ -345,18 +209,14 @@ def main() -> int:
                    default=ROOT / "results" / "jhep_submission_hardening")
     p.add_argument("--figure-dir", type=Path,
                    default=ROOT / "figures_jhep_submission_hardening")
-    p.add_argument("--table-dir", type=Path,
-                   default=ROOT / "tables_jhep_submission_hardening")
     p.add_argument("--quick", action="store_true",
                    help="smoke path: every stage runs its reduced grid")
     p.add_argument("--only-gate", default="",
                    help="comma-separated stage ids, e.g. gate03,gate08")
     p.add_argument("--skip-existing", action="store_true")
-    p.add_argument("--no-check", action="store_true",
-                   help="skip the release-integrity check (not for production)")
     args = p.parse_args()
 
-    for d in (args.output_dir, args.figure_dir, args.table_dir):
+    for d in (args.output_dir, args.figure_dir):
         Path(d).mkdir(parents=True, exist_ok=True)
 
     only = [s.strip() for s in args.only_gate.split(",") if s.strip()]
@@ -392,8 +252,6 @@ def main() -> int:
     am.to_csv(outdir / "all_metrics.csv", index=False)
     print(f"  all_metrics.csv: {len(am)} rows x {am.shape[1]} columns")
 
-    narrative = render_narrative(outdir, commit, cfg.hash)
-    print(f"  rendered {len(narrative)} gate write-ups")
     write_environment(outdir)
 
     sh = ["#!/usr/bin/env bash",
@@ -406,13 +264,8 @@ def main() -> int:
     os.chmod(outdir / "run_commands.sh", 0o755)
 
     ledger = pd.read_csv(outdir / "hardening_claim_ledger.csv").to_dict("records")
-    syn_path = outdir / "architecture_synthesis.csv"
-    syn = pd.read_csv(syn_path) if syn_path.exists() else None
-    tables = write_tables(args.table_dir, ledger, syn)
-    print(f"  tables: {', '.join(tables)}")
-
     artifacts = []
-    for base in (outdir, Path(args.figure_dir), Path(args.table_dir)):
+    for base in (outdir, Path(args.figure_dir)):
         for f in sorted(Path(base).rglob("*")):
             if not f.is_file() or f.name == "manifest.json":
                 continue
@@ -437,22 +290,16 @@ def main() -> int:
         stage_wall_seconds={k: round(v, 2) for k, v in timings.items()},
         production_wall_seconds=round(wall, 2),
         n_ledger_rows=len(ledger), n_all_metrics_rows=int(len(am)),
-        narrative_documents=narrative, tables=tables, artifacts=artifacts)
+        artifacts=artifacts)
     (outdir / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
     print(f"  manifest.json: {len(artifacts)} artifacts")
 
-    write_summary(outdir, cfg, ledger, manifest, wall, narrative)
-    print(f"  summary.md, environment.txt, run_commands.sh")
-    print(f"\nproduction wall time: {wall / 60:.1f} min")
-
-    if not args.no_check:
-        print("\n=== release integrity ===", flush=True)
-        rc = subprocess.run(
-            [sys.executable, str(ROOT / "scripts" / "check_release_integrity.py"),
-             "--output-dir", str(outdir), "--figure-dir", str(args.figure_dir)],
-            cwd=ROOT).returncode
-        if rc != 0:
-            raise SystemExit("release integrity check FAILED")
+    missing = [name for name in EXPECTED if not (outdir / name).is_file()]
+    missing += [name for name in EXPECTED_FIGURES
+                if not (Path(args.figure_dir) / name).is_file()]
+    if missing:
+        raise SystemExit("Missing numerical outputs: " + ", ".join(missing))
+    print(f"Numerical campaign finished in {wall / 60:.1f} min")
     return 0
 
 

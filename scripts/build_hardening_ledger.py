@@ -109,7 +109,7 @@ def main() -> int:
             "intrinsic), so the two must be crosswalked, never compared.",
             estimator_class="deterministic_finite_feature",
             script="scripts/run_gate01_intrinsic.py",
-            output_artifact="gate01_intrinsic_admissibility_summary.md")
+            output_artifact="gate01_intrinsic_admissibility_seed_rows.csv")
         add("g1_physically_admissible_flag_is_asymptotic", "gate01",
             "physically_admissible boolean", "diagnostic_only",
             "False in all 320 rows: the absolute tolerance 1e-9 is tighter than "

@@ -1,8 +1,7 @@
 """Frozen evidence suite for *Virasoro Symmetry in Neural Network Field Theories*.
 
-All conventions are taken from ``Draft-JHEP-Active-v6.tex``; the mapping from
-code symbol to manuscript equation is tabulated in
-``results/jhep_frozen/REPOSITORY_MAP.md`` section 3.
+The numerical conventions are specified by the configuration files and
+implemented in the kernel and sampling modules.
 
 Estimator classes (never mixed inside one uncertainty calculation):
 
