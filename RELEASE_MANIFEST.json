@@ -9,7 +9,7 @@
     {
       "path": "CITATION.cff",
       "bytes": 508,
-      "sha256": "45a5364028241fbda9202f5cf1d0d0319371d544688a2550578b4c8eeabac8a4"
+      "sha256": "5748400973f026ce4d5b153f7c4ce775dbf19ef01fd5c120d0cc90a79166c8e7"
     },
     {
       "path": "INSTALLATION.md",
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3584,
-      "sha256": "d02f1e273a1660c427b222c29f18f046888bc0f2a73d8fd06310736e5003c9eb"
+      "bytes": 3627,
+      "sha256": "09e18d480a9308e3ca8c4ad7a1e2008874e96c6aa0d81150f3eeaca318ae5210"
     },
     {
       "path": "configs/jhep_frozen.yaml",
@@ -2888,8 +2888,8 @@
     },
     {
       "path": "verification/README.md",
-      "bytes": 903,
-      "sha256": "d6d8c2fbd00043f9f31aaa74094d631255562a83ab541c511ab5343501f37ce7"
+      "bytes": 1251,
+      "sha256": "b3130aba0a526f737884f2ae641fd38b93b194ecf3dcbbaaaf0e3db5316ec695"
     },
     {
       "path": "verification/boundary/README.txt",
@@ -2995,6 +2995,21 @@
       "path": "verification/tt_finite_block_audit.json",
       "bytes": 2530,
       "sha256": "ce5e9c020927a86d1034ae916142730fc17ba6fc9a0d942e62e7ac58b13a0b28"
+    },
+    {
+      "path": "verification/width_bootstrap.py",
+      "bytes": 5016,
+      "sha256": "ff770e1e9c82d2d742efa38e970a42527a9785edd3662e9569aa449b21525389"
+    },
+    {
+      "path": "verification/width_bootstrap_replicates.csv",
+      "bytes": 24789,
+      "sha256": "05286d6c9b8bb77728ada08ac2be9c410116de64808130e6315431d4dbb82e57"
+    },
+    {
+      "path": "verification/width_bootstrap_summary.json",
+      "bytes": 3807,
+      "sha256": "0f2c8285da41fa2a5d67c19b65a57c8e6367203ee43472e448557b506f2db7c7"
     },
     {
       "path": "verify_release.py",

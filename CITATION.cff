@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Cite this repository at the full commit used, together with arXiv:2512.24420."
 title: "Virasoro Symmetry in Neural Network Field Theories: Code and Computational Evidence"
 type: software
-version: "2026.11.17"
-date-released: 2026-11-17
+version: "2026.11.18"
+date-released: 2026-11-18
 url: "https://github.com/BrandonJRobinson/NN-2D-CFT"
 repository-code: "https://github.com/BrandonJRobinson/NN-2D-CFT"
 authors:

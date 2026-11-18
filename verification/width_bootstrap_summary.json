@@ -1,0 +1,164 @@
+{
+  "method": "Equal mean of eight log-log OLS slopes of seed-mean errors; seed clusters resampled independently within controls and NS; one common draw per family across all its observables and widths.",
+  "point_estimate": -0.4981011723536384,
+  "percentile_interval_95": [
+    -0.5330574871894165,
+    -0.4662664304112472
+  ],
+  "bootstrap_seed": 20261118,
+  "replicates": 1000,
+  "rng": "numpy.random.default_rng / PCG64",
+  "numpy_version": "2.3.5",
+  "pandas_version": "2.3.3",
+  "family_seeds": {
+    "controls": [
+      "controls_s01",
+      "controls_s02",
+      "controls_s03",
+      "controls_s04"
+    ],
+    "ns": [
+      "ns_s01",
+      "ns_s02",
+      "ns_s03",
+      "ns_s04",
+      "ns_s05",
+      "ns_s06",
+      "ns_s07",
+      "ns_s08"
+    ]
+  },
+  "observables": [
+    {
+      "quantity": "delta_iso",
+      "family": "controls",
+      "exponent": -0.4877381527357249,
+      "widths": [
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    },
+    {
+      "quantity": "b_omega",
+      "family": "controls",
+      "exponent": -0.48304069039937314,
+      "widths": [
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    },
+    {
+      "quantity": "car_relative_error[native_derived_from_boson]",
+      "family": "ns",
+      "exponent": -0.5064944032642776,
+      "widths": [
+        1000,
+        3000,
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    },
+    {
+      "quantity": "LG_residual[native_derived_from_boson]",
+      "family": "ns",
+      "exponent": -0.49746510425419205,
+      "widths": [
+        1000,
+        3000,
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    },
+    {
+      "quantity": "GG_residual[native_derived_from_boson]",
+      "family": "ns",
+      "exponent": -0.4988833319895958,
+      "widths": [
+        1000,
+        3000,
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    },
+    {
+      "quantity": "car_relative_error[randomized_cauchy]",
+      "family": "ns",
+      "exponent": -0.5147566810765515,
+      "widths": [
+        1000,
+        3000,
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    },
+    {
+      "quantity": "LG_residual[randomized_cauchy]",
+      "family": "ns",
+      "exponent": -0.49740562969319996,
+      "widths": [
+        1000,
+        3000,
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    },
+    {
+      "quantity": "GG_residual[randomized_cauchy]",
+      "family": "ns",
+      "exponent": -0.4990253854161919,
+      "widths": [
+        1000,
+        3000,
+        10000,
+        30000,
+        100000,
+        300000,
+        1000000
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "results/jhep_submission_hardening/gate01_intrinsic_admissibility_seed_rows.csv",
+      "sha256": "99c7e3a36bfee342d359f7d506e2d6ff44129f85e8b50c447d57748d3909898a"
+    },
+    {
+      "path": "results/jhep_submission_hardening/gate02_predarboux_virasoro_seed_rows.csv",
+      "sha256": "62a843b06ccb676ebc605e8d986bcac6a3352c45736e3b59efa0d50264e7b366"
+    },
+    {
+      "path": "results/jhep_submission_hardening/ns_pairing_seed_rows.csv",
+      "sha256": "03c6b20322587f2703f99f524d1ec4d7bbc9b2f142d9e4ea8bf868ebdf1cf104"
+    },
+    {
+      "path": "results/jhep_submission_hardening/ns_super_virasoro_seed_rows.csv",
+      "sha256": "2d761b68889b342f7ce95995ac5fc681e60daa2737f5652cb3bf00ff7667f09c"
+    },
+    {
+      "path": "results/jhep_submission_hardening/convergence_joint_fit.csv",
+      "sha256": "34d5c4705e68262ef40d748298559f8b2fa4140b70f4abce4e736699b824d624"
+    }
+  ],
+  "scope": "Reanalysis of saved numerical evidence; no feature simulations."
+}

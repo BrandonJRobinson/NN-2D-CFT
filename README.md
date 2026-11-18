@@ -40,6 +40,7 @@ folder. Conditional-field statistics and weighted ensemble ratios are distinct.
 
     python verification/independent_audit.py
     python verification/check_current.py
+    python verification/width_bootstrap.py
     python verification/boundary/verify_boundary_evidence.py
     python verification/sectors/verify_files.py
 
