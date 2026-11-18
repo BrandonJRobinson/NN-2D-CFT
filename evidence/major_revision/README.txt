@@ -1,9 +1,9 @@
 FOCK AND WARD NUMERICAL REPRODUCTION
 
-Run from any working directory using these script paths:
-    python3 analyze_revision.py
-    python3 summarize_full_ward.py
-    python3 plot_ward_revision.py
+Run from the repository root:
+    python3 evidence/major_revision/analyze_revision.py
+    python3 evidence/major_revision/summarize_full_ward.py
+    python3 evidence/major_revision/plot_ward_revision.py
 
 The first script verifies the INPUTS.json hashes, checks the twenty saved
 pairings, and runs the prescribed exact-phase Ward benchmark. The benchmark

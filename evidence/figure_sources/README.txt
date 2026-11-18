@@ -4,7 +4,7 @@ Run with Python 3, matplotlib, numpy and pandas:
 
     python3 evidence/figure_sources/redraw_figures.py
 
-Run from the manuscript directory, or use an absolute path to the script.
+Run from the repository root, or use an absolute path to the script.
 The default output is evidence/figures/. Optional --preview-dir DIRECTORY
 writes PNG previews. No LaTeX or network simulations are run.
 
