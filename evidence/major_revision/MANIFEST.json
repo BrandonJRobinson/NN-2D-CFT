@@ -9,7 +9,7 @@
     },
     {
       "path": "README.txt",
-      "size": 2078,
+      "size": 1171,
       "sha256": "4659daa2b3076c693319f9bf91a8df97d8504d63cad3095c23d847ef640a2c3c",
       "bytes": 1171
     },
@@ -195,7 +195,7 @@
     },
     {
       "path": "plot_ward_revision.py",
-      "size": 5617,
+      "size": 5788,
       "sha256": "15675e15824a3e77235145a0cb7bd0c5cb4a7d729c26f3cf7d32d5a6b3c47c12",
       "bytes": 5788
     },

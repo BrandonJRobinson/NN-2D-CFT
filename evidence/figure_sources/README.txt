@@ -14,7 +14,7 @@ locations and SHA-256 hashes. The script verifies these inputs before use.
 Original generation commit: 2900ae4aa10ff33ecf88a527e9cf633f0185f98c
 Configuration hash: f51ad38719b59543
 
-Figures 1, 2, 3, 4 and 6 use a 5.6-inch canvas, matched to their manuscript
+The five figures generated here use a 5.6-inch canvas, matched to their manuscript
 insertion width. Axis labels are 10.5 points, and ticks and legends 9.5
 points before the negligible final scaling. Legends are moved outside the
 plots and shared across panels where appropriate. Internal code identifiers

@@ -43,8 +43,8 @@
     },
     {
       "path": "evidence/figure_sources/README.txt",
-      "bytes": 1632,
-      "sha256": "fdb534347e756970c36fbd0e02929ca0bf38f181bc3bce5c6f2ad8bf48bf65d1"
+      "bytes": 1639,
+      "sha256": "d810e85af5135c2c83f07830325d968936972afc233a8f561788be055cfe0ff9"
     },
     {
       "path": "evidence/figure_sources/data/gate01_intrinsic_admissibility_seed_rows.csv",
@@ -169,7 +169,7 @@
     {
       "path": "evidence/major_revision/MANIFEST.json",
       "bytes": 8638,
-      "sha256": "374437450b6f3ea11a98bd6f8afdffc27fbce781cd8eb253a86eb74537638f2a"
+      "sha256": "ce167552d8be75cbf5268def88e8bf5a2a482ac1021a60adbc78eb7377cda610"
     },
     {
       "path": "evidence/major_revision/README.txt",
